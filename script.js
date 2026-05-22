@@ -1047,3 +1047,44 @@ document.addEventListener('keydown', event => {
 } catch(error) {
   console.warn('Script original interrompido, mas os modais continuam funcionando:', error)
 }
+
+
+/* =========================================================
+   ASSISTENTE IA FLUTUANTE
+   ========================================================= */
+(function(){
+  const btn = document.getElementById('aiFloatingBtn');
+  const widget = document.getElementById('aiChatWidget');
+  const close = document.getElementById('aiChatClose');
+  const body = widget ? widget.querySelector('.ai-chat-body') : null;
+
+  if(!btn || !widget) return;
+
+  function toggleAI(){
+    widget.classList.toggle('active');
+    widget.setAttribute('aria-hidden', widget.classList.contains('active') ? 'false' : 'true');
+  }
+
+  btn.addEventListener('click', toggleAI);
+
+  close?.addEventListener('click', () => {
+    widget.classList.remove('active');
+    widget.setAttribute('aria-hidden', 'true');
+  });
+
+  widget.querySelectorAll('[data-ai-answer]').forEach(button => {
+    button.addEventListener('click', () => {
+      const user = document.createElement('div');
+      user.className = 'ai-message user';
+      user.textContent = button.textContent;
+
+      const bot = document.createElement('div');
+      bot.className = 'ai-message bot';
+      bot.textContent = button.getAttribute('data-ai-answer');
+
+      body.appendChild(user);
+      body.appendChild(bot);
+      body.scrollTop = body.scrollHeight;
+    });
+  });
+})();

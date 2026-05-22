@@ -462,34 +462,7 @@
       </div>
     </section>
 
-    <section class="faq-section section reveal" id="faq">
-      <div class="section-heading compact">
-        <span class="tag small">AJUDA</span>
-        <h2>Perguntas frequentes</h2>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary>A abertura de conta é gratuita?</summary>
-          <p>Sim. O processo é digital, gratuito e pode ser concluído em poucos minutos.</p>
-        </details>
-
-        <details>
-          <summary>O cartão tem anuidade?</summary>
-          <p>O plano inicial não possui anuidade. Planos premium podem ter condições específicas conforme benefícios.</p>
-        </details>
-
-        <details>
-          <summary>Como funciona o cashback?</summary>
-          <p>O cashback é calculado de acordo com seus gastos e aparece direto no painel do app.</p>
-        </details>
-
-        <details>
-          <summary>Posso usar o cartão internacionalmente?</summary>
-          <p>Sim. Os cartões são preparados para compras nacionais, internacionais e virtuais.</p>
-        </details>
-      </div>
-    </section>
+    
 
     
     <section class="premium-plus-section section reveal" id="premium-plus">
@@ -580,7 +553,35 @@
 
   </main>
 
-  <footer class="footer">
+  <section class="faq-section section reveal" id="faq">
+      <div class="section-heading compact">
+        <span class="tag small">AJUDA</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>A abertura de conta é gratuita?</summary>
+          <p>Sim. O processo é digital, gratuito e pode ser concluído em poucos minutos.</p>
+        </details>
+
+        <details>
+          <summary>O cartão tem anuidade?</summary>
+          <p>O plano inicial não possui anuidade. Planos premium podem ter condições específicas conforme benefícios.</p>
+        </details>
+
+        <details>
+          <summary>Como funciona o cashback?</summary>
+          <p>O cashback é calculado de acordo com seus gastos e aparece direto no painel do app.</p>
+        </details>
+
+        <details>
+          <summary>Posso usar o cartão internacionalmente?</summary>
+          <p>Sim. Os cartões são preparados para compras nacionais, internacionais e virtuais.</p>
+        </details>
+      </div>
+    </section>
+<footer class="footer">
     <div>
       <a href="#inicio" class="footer-brand">
         <strong>YOUR BANK</strong>
@@ -763,5 +764,34 @@
     </div>
   </div>
   <script src="script.js"></script>
+
+  <button class="ai-floating-btn" id="aiFloatingBtn" type="button" aria-label="Abrir assistente IA">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <div class="ai-chat-widget" id="aiChatWidget" aria-hidden="true">
+    <div class="ai-chat-header">
+      <div>
+        <span>Assistente IA</span>
+        <strong>Orientação financeira</strong>
+      </div>
+      <button type="button" id="aiChatClose" aria-label="Fechar assistente">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="ai-chat-body">
+      <div class="ai-message bot">Olá! Posso te ajudar a organizar gastos, escolher um cartão ou entender seus investimentos.</div>
+      <div class="ai-message user">Quero organizar meus gastos.</div>
+      <div class="ai-message bot">Reserve 20% da renda, acompanhe seu cashback mensal e priorize pagamentos essenciais.</div>
+    </div>
+
+    <div class="ai-chat-actions">
+      <button type="button" data-ai-answer="Seu score financeiro está bom. Continue pagando faturas em dia e mantendo baixo uso do limite.">Score</button>
+      <button type="button" data-ai-answer="Para economizar, acompanhe gastos por categoria e ative alertas de movimentação.">Economizar</button>
+      <button type="button" data-ai-answer="Para cartão ideal, compare cashback, anuidade e benefícios de viagem.">Cartão ideal</button>
+    </div>
+  </div>
+
 </body>
 </html>

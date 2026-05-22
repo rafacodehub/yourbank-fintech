@@ -8590,3 +8590,296 @@ section:has(.primary-btn.open-account-flow):has(.tag):has(h2){
     opacity:.32 !important;
   }
 }
+
+
+/* =========================================================
+   AJUSTES FINAIS - IA FLUTUANTE + SCORE + FAQ FINAL
+   ========================================================= */
+
+/* Excluir painel duplicado de simulação/abertura em PC e celular */
+.card-rule-section,
+.account-simulation-section,
+.opening-simulation-section,
+.account-flow-section{
+  display:none !important;
+}
+
+/* Ocultar painel antigo de orientação dentro do app */
+.ai-section,
+.assistant-section,
+.financial-assistant-section,
+.smart-assistant-section,
+.fintech-assistant,
+.assistant-card,
+section:has(.search-tags):has(.tag),
+section:has(.ai-actions):has(.tag){
+  display:none !important;
+}
+
+/* FAQ no final e sem setas extras */
+.faq-section{
+  padding-top:64px !important;
+  padding-bottom:58px !important;
+}
+
+.faq-list summary{
+  list-style:none !important;
+}
+
+.faq-list summary::-webkit-details-marker{
+  display:none !important;
+}
+
+.faq-list summary::before{
+  display:none !important;
+  content:none !important;
+}
+
+.faq-list summary::after{
+  content:'+' !important;
+  color:#c084fc !important;
+  margin-left:auto !important;
+}
+
+/* Botão IA flutuante */
+.ai-floating-btn{
+  position:fixed;
+  right:24px;
+  bottom:26px;
+  width:62px;
+  height:62px;
+  z-index:2600;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  background:linear-gradient(135deg,#8b2eff,#5f00ff);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  box-shadow:0 18px 55px rgba(95,0,255,.38);
+  transition:.25s ease;
+}
+
+.ai-floating-btn:hover{
+  transform:translateY(-3px);
+}
+
+.ai-floating-btn i{
+  font-size:24px;
+}
+
+.ai-chat-widget{
+  position:fixed;
+  right:24px;
+  bottom:100px;
+  width:min(360px, calc(100vw - 32px));
+  z-index:2601;
+  display:none;
+  overflow:hidden;
+  border-radius:26px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(12,5,24,.98);
+  box-shadow:0 28px 90px rgba(0,0,0,.45);
+}
+
+.ai-chat-widget.active{
+  display:block;
+}
+
+.ai-chat-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+}
+
+.ai-chat-header span{
+  display:block;
+  color:#c9a7ff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+
+.ai-chat-header strong{
+  display:block;
+  margin-top:4px;
+  font-size:16px;
+}
+
+.ai-chat-header button{
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:12px;
+  color:#fff;
+  background:rgba(255,255,255,.08);
+  cursor:pointer;
+}
+
+.ai-chat-body{
+  padding:18px;
+  display:grid;
+  gap:12px;
+  max-height:270px;
+  overflow:auto;
+}
+
+.ai-message{
+  max-width:86%;
+  padding:12px 14px;
+  border-radius:16px;
+  font-size:13px;
+  line-height:1.45;
+}
+
+.ai-message.bot{
+  justify-self:start;
+  background:rgba(255,255,255,.065);
+  color:#e9e0ff;
+}
+
+.ai-message.user{
+  justify-self:end;
+  background:linear-gradient(135deg,#8b2eff,#5f00ff);
+  color:#fff;
+}
+
+.ai-chat-actions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  padding:0 18px 18px;
+}
+
+.ai-chat-actions button{
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+  padding:10px 8px;
+  color:#fff;
+  background:rgba(255,255,255,.055);
+  cursor:pointer;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* Score financeiro mais horizontal e alinhado */
+.score-section,
+.financial-score-section,
+.score-card,
+.finance-score,
+.credit-score{
+  max-width:1440px;
+  margin-inline:auto;
+}
+
+.score-card,
+.finance-score,
+.credit-score{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  align-items:center !important;
+  gap:24px !important;
+}
+
+/* Comparador inteligente horizontal */
+.compare-options,
+.card-options,
+.compare-benefits,
+#compareBenefits{
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  gap:12px !important;
+  overflow-x:auto !important;
+  scroll-snap-type:x mandatory !important;
+  -webkit-overflow-scrolling:touch !important;
+  padding-bottom:10px !important;
+}
+
+.compare-options::-webkit-scrollbar,
+.card-options::-webkit-scrollbar,
+.compare-benefits::-webkit-scrollbar,
+#compareBenefits::-webkit-scrollbar{
+  display:none !important;
+}
+
+#compareBenefits li,
+.compare-benefits li{
+  flex:0 0 auto !important;
+  min-width:220px !important;
+  scroll-snap-align:center !important;
+}
+
+@media(max-width:768px){
+
+  .ai-floating-btn{
+    right:18px !important;
+    bottom:88px !important;
+    width:56px !important;
+    height:56px !important;
+    border-radius:20px !important;
+  }
+
+  .ai-floating-btn i{
+    font-size:21px !important;
+  }
+
+  .ai-chat-widget{
+    right:12px !important;
+    left:12px !important;
+    bottom:152px !important;
+    width:auto !important;
+    border-radius:22px !important;
+  }
+
+  .ai-chat-body{
+    max-height:245px !important;
+  }
+
+  .ai-chat-actions{
+    grid-template-columns:1fr 1fr 1fr !important;
+  }
+
+  .ai-chat-actions button{
+    font-size:11px !important;
+    padding:9px 6px !important;
+  }
+
+  /* Score horizontal no mobile */
+  .score-card,
+  .finance-score,
+  .credit-score{
+    display:flex !important;
+    gap:14px !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding-bottom:12px !important;
+  }
+
+  .score-card > *,
+  .finance-score > *,
+  .credit-score > *{
+    flex:0 0 82% !important;
+    scroll-snap-align:center !important;
+  }
+
+  .faq-section{
+    padding-top:46px !important;
+    padding-bottom:46px !important;
+  }
+
+  .faq-list summary{
+    font-size:15px !important;
+    gap:12px !important;
+  }
+
+  .faq-list details{
+    padding:18px !important;
+    border-radius:20px !important;
+  }
+}
