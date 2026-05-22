@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Your Bank | Banco digital premium</title>
+  <meta name="description" content="Landing page premium para banco digital, com cartões, investimentos, segurança e experiência moderna." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body data-theme="purple">
+  <div class="theme-gradient-layer"></div>
+
+  <div class="premium-loader" id="premiumLoader">
+    <div class="loader-content">
+      <h1>YOUR BANK</h1>
+      <span>by Rafacodehub</span>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a href="#inicio" class="logo" aria-label="Voltar ao início">
+      <strong>YOUR BANK</strong>
+      <span>by Rafacodehub</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+      <a href="#para-voce">Pessoa Física</a>
+      <a href="#pj">PJ</a>
+      <a href="#cartoes">Cartões</a>
+      <a href="#investimentos">Investimentos</a>
+      <a href="#faq">Ajuda</a>
+    </nav>
+
+    <div class="nav-actions">
+      <form class="nav-search" role="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Buscar" aria-label="Buscar no site">
+      </form>
+      <button class="login login-trigger" type="button">Entrar</button>
+      <a href="#" class="account-btn open-account open-account-flow">Abrir conta</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero section reveal" id="inicio">
+      <div class="hero-bg orb-one"></div>
+      <div class="hero-bg orb-two"></div>
+
+      <div class="hero-content">
+        <div class="hero-copy">
+          <span class="tag">BANCO DIGITAL</span>
+
+          <h1>Conta, cartão e investimentos em um só app</h1>
+
+          <p>
+            Organize seu dinheiro com Pix, cartão, segurança e investimentos em uma experiência simples, rápida e transparente.
+          </p>
+
+          <div class="buttons">
+            <a href="#" class="primary-btn open-account open-account-flow">Abrir conta <i class="fa-solid fa-arrow-right"></i></a>
+
+            <button class="video-btn" id="openModal" type="button">
+              <span class="play"><i class="fa-solid fa-play"></i></span>
+              Ver app
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Cartões premium Your Bank">
+          <div class="orbit-line"></div>
+
+          <div class="card premium-card pink-card" data-rotate="-12">
+            <span>Your Pink</span>
+            <div class="card-reflection"></div>
+            <div class="chip"></div>
+            <i class="fa-solid fa-wifi wifi"></i>
+            <div class="mastercard"><span></span><span></span></div>
+          </div>
+
+          <div class="card premium-card black-card" data-rotate="0">
+            <span>Your Black</span>
+            <div class="card-reflection"></div>
+            <div class="chip silver"></div>
+            <i class="fa-solid fa-wifi wifi"></i>
+            <div class="mastercard"><span></span><span></span></div>
+          </div>
+
+          <div class="card premium-card purple-card" data-rotate="12">
+            <span>Your Purple</span>
+            <div class="card-reflection"></div>
+            <div class="chip"></div>
+            <i class="fa-solid fa-wifi wifi"></i>
+            <div class="mastercard"><span></span><span></span></div>
+          </div>
+
+          <div class="finance-badge badge-one"><i class="fa-solid fa-lock"></i> Proteção ativa</div>
+          <div class="finance-badge badge-two"><i class="fa-solid fa-arrow-trend-up"></i> 2% cashback</div>
+          <div class="finance-badge badge-three"><i class="fa-solid fa-bolt"></i> Pix 24h</div>
+        </div>
+      </div>
+
+      <section class="security-section reveal" id="seguranca">
+        <div class="security-main">
+          <div class="security-lock">
+            <i class="fa-solid fa-lock"></i>
+            <span></span>
+          </div>
+
+          <div class="security-copy">
+            <span class="tag small">SEGURANÇA BANCÁRIA</span>
+            <h2>Proteção de ponta a ponta</h2>
+            <p>
+              Tecnologia avançada para proteger seus dados, cartões e transações em tempo real.
+            </p>
+          </div>
+        </div>
+
+        <div class="security-grid">
+          <article class="security-card">
+            <i class="fa-solid fa-fingerprint"></i>
+            <h3>Biometria inteligente</h3>
+            <p>Acesso protegido por autenticação segura e validação em múltiplas camadas.</p>
+          </article>
+
+          <article class="security-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Criptografia avançada</h3>
+            <p>Seus dados protegidos com padrões modernos de segurança digital.</p>
+          </article>
+
+          <article class="security-card">
+            <i class="fa-solid fa-bell"></i>
+            <h3>Alertas em tempo real</h3>
+            <p>Notificações instantâneas para movimentações, compras e tentativas suspeitas.</p>
+          </article>
+
+          <article class="security-card">
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Controle do cartão</h3>
+            <p>Bloqueie, desbloqueie e ajuste limites direto pelo aplicativo.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="features section reveal" id="para-voce">
+      <div class="section-heading">
+        <span class="tag small">BENEFÍCIOS</span>
+        <h2>Recursos para sua rotina financeira</h2>
+        <p>Conta digital, Pix, cartão, investimentos e suporte com navegação simples e segura.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <i class="fa-regular fa-credit-card"></i>
+          <h3>Sem anuidade</h3>
+          <p>Mais liberdade para usar seu cartão sem custos desnecessários.</p>
+        </article>
+
+        <article class="feature">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Abertura rápida</h3>
+          <p>Cadastro intuitivo, conta aprovada e pronta para usar em poucos minutos.</p>
+        </article>
+
+        <article class="feature">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Segurança total</h3>
+          <p>Biometria, token, monitoramento e alertas inteligentes em tempo real.</p>
+        </article>
+
+        <article class="feature">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Suporte 24h</h3>
+          <p>Atendimento digital para resolver dúvidas sempre que você precisar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="private-section section reveal" id="investimentos">
+      <div class="private-card">
+        <div>
+          <span class="tag small">GESTÃO PATRIMONIAL</span>
+          <h2>Investimentos com acompanhamento simples</h2>
+          <p>
+            Veja a evolução dos seus investimentos, acompanhe riscos e organize sua carteira com informações simples de entender.
+          </p>
+          <a href="#" class="primary-btn">Conhecer investimentos <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="wealth-panel">
+          <div class="panel-top">
+            <span>Patrimônio estimado</span>
+            <strong>R$ 128.420,90</strong>
+            <small>+12,4% este mês</small>
+          </div>
+
+          <div class="chart-bars" aria-label="Gráfico ilustrativo">
+            <span style="height: 42%"></span>
+            <span style="height: 66%"></span>
+            <span style="height: 54%"></span>
+            <span style="height: 78%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 88%"></span>
+          </div>
+
+          <div class="asset-list">
+            <div><span>Renda fixa</span><strong>46%</strong></div>
+            <div><span>Ações</span><strong>32%</strong></div>
+            <div><span>Fundos</span><strong>22%</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-rule-section section reveal" id="pj">
+      <div class="card-rule-content">
+        <span class="tag small">CONTROLE TOTAL PELO APP</span>
+        <h2>Cartão físico e virtual no app</h2>
+        <p>
+          Ajuste limite, bloqueie o cartão, crie versões virtuais e receba alertas de cada compra pelo aplicativo.
+        </p>
+      </div>
+    </section>
+
+    <section class="fintech-lab-section section reveal">
+      <div class="fintech-copy">
+        <span class="tag small">CONTROLE EM TEMPO REAL</span>
+        <h2>Painel da conta em tempo real</h2>
+        <p>Acompanhe saldo, limite, cashback e ações rápidas em uma interface inspirada em aplicativos financeiros reais.</p>
+      </div>
+
+      <div class="app-dashboard">
+        <div class="phone-shell">
+          <div class="phone-top"></div>
+
+          <div class="balance-card">
+            <span>Saldo disponível</span>
+            <strong id="balanceValue">R$ 8.420,90</strong>
+            <small>+12,4% este mês</small>
+          </div>
+
+          <div class="quick-actions">
+            <button type="button"><i class="fa-brands fa-pix"></i><span>Pix</span></button>
+            <button type="button"><i class="fa-solid fa-credit-card"></i><span>Cartão</span></button>
+            <button type="button"><i class="fa-solid fa-chart-line"></i><span>Investir</span></button>
+          </div>
+
+          <div class="spend-card">
+            <div>
+              <span>Limite usado</span>
+              <strong id="limitText">42%</strong>
+            </div>
+            <div class="progress"><span id="limitBar"></span></div>
+          </div>
+        </div>
+
+        <div class="calculator-card">
+          <span class="calculator-label">Simulação de cartão</span>
+          <h3>Estimativa de cashback</h3>
+
+          <label for="spendRange">Gasto no cartão</label>
+          <input type="range" id="spendRange" min="500" max="12000" value="4200" step="100">
+
+          <div class="calc-result">
+            <span id="spendValue">R$ 4.200</span>
+            <strong id="cashbackValue">R$ 84,00</strong>
+          </div>
+
+          <p>Estimativa com 2% de cashback no plano Your Black.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="banking-panel-section section reveal" id="area-digital">
+      <div class="section-heading compact">
+        <span class="tag small">ÁREA DIGITAL</span>
+        <h2>Uma experiência de banco no dia a dia</h2>
+        <p>Visualize saldo, fatura, Pix e movimentações recentes em uma interface simples e segura.</p>
+      </div>
+
+      <div class="banking-panel-grid">
+        <article class="account-overview-card" data-glow-card>
+          <div class="account-topline">
+            <span>Conta digital</span>
+            <strong>Ativa</strong>
+          </div>
+
+          <div class="account-balance-block">
+            <span>Saldo disponível</span>
+            <strong>R$ 8.420,90</strong>
+            <small>Atualizado agora</small>
+          </div>
+
+          <div class="account-actions">
+            <button type="button"><i class="fa-brands fa-pix"></i> Pix</button>
+            <button type="button"><i class="fa-solid fa-barcode"></i> Pagar</button>
+            <button type="button"><i class="fa-solid fa-money-bill-transfer"></i> Transferir</button>
+          </div>
+        </article>
+
+        <article class="transactions-card" data-glow-card>
+          <div class="panel-title-row">
+            <div>
+              <span>Movimentações</span>
+              <h3>Últimas transações</h3>
+            </div>
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <div class="transaction-list">
+            <div class="transaction-item positive">
+              <span><i class="fa-brands fa-pix"></i></span>
+              <div>
+                <strong>Pix recebido</strong>
+                <small>Hoje, 08:42</small>
+              </div>
+              <b>+R$ 420,00</b>
+            </div>
+
+            <div class="transaction-item">
+              <span><i class="fa-solid fa-credit-card"></i></span>
+              <div>
+                <strong>Compra no cartão</strong>
+                <small>Mercado</small>
+              </div>
+              <b>-R$ 89,90</b>
+            </div>
+
+            <div class="transaction-item">
+              <span><i class="fa-solid fa-mobile-screen"></i></span>
+              <div>
+                <strong>Assinatura digital</strong>
+                <small>Mensalidade</small>
+              </div>
+              <b>-R$ 39,90</b>
+            </div>
+          </div>
+        </article>
+
+        <article class="security-status-card" data-glow-card>
+          <div class="panel-title-row">
+            <div>
+              <span>Segurança</span>
+              <h3>Proteção ativa</h3>
+            </div>
+            <i class="fa-solid fa-lock"></i>
+          </div>
+
+          <ul class="security-status-list">
+            <li><span></span> Biometria habilitada</li>
+            <li><span></span> Alertas em tempo real</li>
+            <li><span></span> Cartão virtual disponível</li>
+            <li><span></span> Monitoramento antifraude</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="choose-card-section section reveal" id="cartoes">
+      <div class="section-heading">
+        <span class="tag small">CARTÕES</span>
+        <h2>Cartões para diferentes perfis</h2>
+        <p>Planos com benefícios objetivos, controle pelo app e visual moderno sem perder a clareza.</p>
+      </div>
+
+      <div class="choose-grid">
+        <article class="choose-card" data-theme-card="purple">
+          <div class="mini-card mini-purple">
+            <div class="mini-reflection"></div>
+            <div class="mini-chip"></div>
+            <i class="fa-solid fa-wifi mini-wifi"></i>
+            <div class="mini-mastercard"><span></span><span></span></div>
+          </div>
+          <h3>Your Purple</h3>
+          <p>Ideal para o dia a dia.</p>
+          <ul>
+            <li>Pix ilimitado</li>
+            <li>Cartão virtual</li>
+            <li>Controle de gastos</li>
+          </ul>
+          <button class="request-card" type="button">Solicitar cartão</button>
+        </article>
+
+        <article class="choose-card featured" data-theme-card="black">
+          <span class="popular-badge">Mais escolhido</span>
+          <div class="mini-card mini-black">
+            <div class="mini-reflection"></div>
+            <div class="mini-chip silver"></div>
+            <i class="fa-solid fa-wifi mini-wifi"></i>
+            <div class="mini-mastercard"><span></span><span></span></div>
+          </div>
+          <h3>Your Black</h3>
+          <p>Cashback e serviços digitais.</p>
+          <ul>
+            <li>Até 2% cashback</li>
+            <li>Benefícios de viagem</li>
+            <li>Atendimento prioritário</li>
+          </ul>
+          <button class="request-card" type="button">Solicitar cartão</button>
+        </article>
+
+        <article class="choose-card" data-theme-card="pink">
+          <div class="mini-card mini-light">
+            <div class="mini-reflection"></div>
+            <div class="mini-chip"></div>
+            <i class="fa-solid fa-wifi mini-wifi"></i>
+            <div class="mini-mastercard"><span></span><span></span></div>
+          </div>
+          <h3>Your Pink</h3>
+          <p>Benefícios para uso diário.</p>
+          <ul>
+            <li>Design exclusivo</li>
+            <li>Cashback especial</li>
+            <li>Uso global</li>
+          </ul>
+          <button class="request-card" type="button">Solicitar cartão</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials section reveal">
+      <div class="section-heading compact">
+        <span class="tag small">CONFIANÇA</span>
+        <h2>Confiança e praticidade</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Interface elegante, cartão bonito e controle financeiro muito simples.”</p>
+          <strong>Juliana R.</strong>
+        </article>
+
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“O simulador de cashback deixa tudo mais claro antes de gastar.”</p>
+          <strong>Carlos M.</strong>
+        </article>
+
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Visual premium e sensação de segurança desde o primeiro acesso.”</p>
+          <strong>Fernanda L.</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq-section section reveal" id="faq">
+      <div class="section-heading compact">
+        <span class="tag small">AJUDA</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>A abertura de conta é gratuita?</summary>
+          <p>Sim. O processo é digital, gratuito e pode ser concluído em poucos minutos.</p>
+        </details>
+
+        <details>
+          <summary>O cartão tem anuidade?</summary>
+          <p>O plano inicial não possui anuidade. Planos premium podem ter condições específicas conforme benefícios.</p>
+        </details>
+
+        <details>
+          <summary>Como funciona o cashback?</summary>
+          <p>O cashback é calculado de acordo com seus gastos e aparece direto no painel do app.</p>
+        </details>
+
+        <details>
+          <summary>Posso usar o cartão internacionalmente?</summary>
+          <p>Sim. Os cartões são preparados para compras nacionais, internacionais e virtuais.</p>
+        </details>
+      </div>
+    </section>
+
+    
+    <section class="premium-plus-section section reveal" id="premium-plus">
+      <div class="section-heading">
+        <span class="tag small">RECURSOS DO APP</span>
+        <h2>Recursos que aumentam a sensação de produto real</h2>
+        <p>Componentes leves de simulação para mostrar funcionalidades sem transformar a página em infoproduto.</p>
+      </div>
+
+      <div class="premium-plus-grid">
+        <article class="interactive-card spotlight-card" data-glow-card>
+          <span class="plus-kicker">Score financeiro</span>
+          <h3 id="scoreNumber">742</h3>
+          <p>Veja como hábitos de pagamento podem melhorar seu perfil financeiro.</p>
+
+          <div class="score-actions">
+            <button type="button" class="plus-btn" id="scoreUp">Pagar fatura</button>
+            <button type="button" class="plus-btn ghost" id="scoreDown">Usar limite</button>
+          </div>
+
+          <div class="score-bar">
+            <span id="scoreBar"></span>
+          </div>
+        </article>
+
+        <article class="interactive-card" data-glow-card>
+          <span class="plus-kicker">Comparador inteligente</span>
+          <h3 id="compareTitle">Your Black</h3>
+          <p id="compareText">Cashback elevado, atendimento premium e benefícios para quem busca exclusividade.</p>
+
+          <div class="compare-switch">
+            <button type="button" data-card-option="pink">Pink</button>
+            <button type="button" data-card-option="black" class="active">Black</button>
+            <button type="button" data-card-option="purple">Purple</button>
+          </div>
+
+          <ul class="compare-benefits" id="compareBenefits">
+            <li>Até 2% cashback</li>
+            <li>Benefícios de viagem</li>
+            <li>Atendimento prioritário</li>
+          </ul>
+        </article>
+
+        <article class="interactive-card ai-card" data-glow-card>
+          <span class="plus-kicker">Assistente financeiro</span>
+          <h3>Orientação dentro do app</h3>
+
+          <div class="ai-chat">
+            <div class="ai-message user">Quero organizar meus gastos.</div>
+            <div class="ai-message bot" id="aiAnswer">Analisei seu perfil: reserve 20% da renda e acompanhe o cashback mensal.</div>
+          </div>
+
+          <div class="ai-options">
+            <button type="button" data-ai="economia">Economizar</button>
+            <button type="button" data-ai="investir">Investir</button>
+            <button type="button" data-ai="cartao">Cartão ideal</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="account-flow-section section reveal">
+      <div class="account-flow-card" data-glow-card>
+        <div>
+          <span class="tag small">ABERTURA DE CONTA</span>
+          <h2>Abra sua conta com poucos passos</h2>
+          <p>Um fluxo simples de cadastro ajuda a mostrar como a abertura de conta funcionaria na prática.</p>
+        </div>
+
+        <button type="button" class="primary-btn" id="openAccountFlow">
+          Simular abertura de conta <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="final-cta section reveal">
+      <div>
+        <span class="rocket"><i class="fa-solid fa-building-columns"></i></span>
+      </div>
+
+      <div>
+        <h2>Abra sua conta digital em poucos minutos</h2>
+        <p>Simples, segura e com os principais recursos para organizar sua vida financeira.</p>
+      </div>
+
+      <a href="#" class="primary-btn open-account open-account-flow">Abrir minha conta agora <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <a href="#inicio" class="footer-brand">
+        <strong>YOUR BANK</strong>
+        <span>by Rafacodehub</span>
+      </a>
+    </div>
+
+    <div class="footer-grid">
+      <div>
+        <h3>Para você</h3>
+        <a href="#">Conta digital</a>
+        <a href="#">Cartões</a>
+        <a href="#">Investimentos</a>
+      </div>
+
+      <div>
+        <h3>Institucional</h3>
+        <a href="#">Sobre nós</a>
+        <a href="#">Carreiras</a>
+        <a href="#">Governança</a>
+          <a href="#">Política de privacidade</a>
+          <a href="#">Termos de uso</a>
+      </div>
+
+      <div>
+        <h3>Ajuda</h3>
+        <a href="#">Central de ajuda</a>
+        <a href="#">Segurança</a>
+        <a href="#">Ouvidoria</a>
+          <a href="#">Banco Central</a>
+      </div>
+
+      <div>
+        <h3>Siga-nos</h3>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/rafacodehub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-panel">
+      <button class="close-search" id="closeSearch" aria-label="Fechar busca">✕</button>
+      <span>Busca inteligente</span>
+      <h3>O que você procura?</h3>
+      <input type="text" placeholder="Ex: cartão black, pix, investimentos..." aria-label="Campo de busca">
+      <div class="search-tags">
+        <button type="button">Conta digital</button>
+        <button type="button">Cartão premium</button>
+        <button type="button">Investimentos</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="video-box">
+      <button class="close-modal" id="closeModal" aria-label="Fechar vídeo">✕</button>
+      <div class="video-copy">
+        <span>Demo Your Bank</span>
+        <h3>Uma experiência bancária simples, segura e premium.</h3>
+        <p>Este espaço pode receber um vídeo institucional ou apresentação do produto.</p>
+      </div>
+      <button class="play-big" aria-label="Reproduzir vídeo">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="account-flow-modal" id="accountFlowModal" aria-hidden="true">
+    <div class="account-flow-box">
+      <button class="close-account-flow" id="closeAccountFlow" aria-label="Fechar abertura de conta">✕</button>
+
+      <span class="tag small">SIMULAÇÃO</span>
+      <h3>Abertura de conta</h3>
+      <p>Preencha os dados para simular uma experiência real de conversão.</p>
+
+      <form class="account-form">
+        <label>
+          Nome completo
+          <input type="text" placeholder="Seu nome" required>
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" placeholder="seuemail@email.com" required>
+        </label>
+
+        <label>
+          Tipo de conta
+          <select>
+            <option>Pessoa Física</option>
+            <option>Conta PJ</option>
+            <option>MEI</option>
+          </select>
+        </label>
+
+        <button type="submit" class="primary-btn">Enviar simulação</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Solicitação iniciada com sucesso!</div>
+  <div class="bank-modal-final" id="loginModalFinal" aria-hidden="true">
+    <div class="bank-modal-card-final">
+      <button class="bank-close-final" data-close-bank-modal type="button">×</button>
+      <span class="bank-kicker-final">ACESSO SEGURO</span>
+      <h3>Entrar na conta</h3>
+      <p id="loginTextFinal">Digite seu CPF e senha para acessar sua área digital.</p>
+
+      <form id="loginStepOneFinal" class="bank-form-final">
+        <label>CPF
+          <input type="text" placeholder="000.000.000-00" inputmode="numeric" required>
+        </label>
+        <label>Senha
+          <input type="password" placeholder="Digite sua senha" required>
+        </label>
+        <button type="submit">Avançar</button>
+        <a href="#" class="forgot-final">Esqueci a senha</a>
+      </form>
+
+      <form id="loginSmsFinal" class="bank-form-final sms-hidden-final">
+        <p class="sms-alert-final">Foi enviado um código ao SMS cadastrado. Digite os 4 dígitos abaixo.</p>
+        <div class="sms-boxes-final">
+          <input maxlength="1" inputmode="numeric">
+          <input maxlength="1" inputmode="numeric">
+          <input maxlength="1" inputmode="numeric">
+          <input maxlength="1" inputmode="numeric">
+        </div>
+        <button type="submit">Validar código</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="bank-modal-final" id="openAccountModalFinal" aria-hidden="true">
+    <div class="bank-modal-card-final bank-large-final">
+      <button class="bank-close-final" data-close-bank-modal type="button">×</button>
+      <span class="bank-kicker-final">ABERTURA DE CONTA</span>
+      <h3>Abrir conta Your Bank</h3>
+      <p>Preencha seus dados para iniciar sua conta digital.</p>
+
+      <form id="openAccountFormFinal" class="bank-form-final">
+        <label>Nome completo
+          <input type="text" placeholder="Digite seu nome completo" required>
+        </label>
+        <label>CPF
+          <input type="text" placeholder="000.000.000-00" inputmode="numeric" required>
+        </label>
+        <label>Endereço
+          <input type="text" placeholder="Rua, número, bairro e cidade" required>
+        </label>
+        <label>E-mail
+          <input type="email" placeholder="seuemail@exemplo.com" required>
+        </label>
+        <label>Telefone
+          <input type="tel" placeholder="(00) 00000-0000" required>
+        </label>
+        <button type="submit">Avançar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="bank-modal-final" id="accountStepsModalFinal" aria-hidden="true">
+    <div class="bank-modal-card-final bank-large-final">
+      <button class="bank-close-final" data-close-bank-modal type="button">×</button>
+      <span class="bank-kicker-final">PROCESSO DA CONTA</span>
+      <h3>Abertura em 3 etapas</h3>
+      <p id="accountStepTextFinal">Dados pessoais recebidos. Avance para validação.</p>
+
+      <div class="steps-final">
+        <div class="step-final active"><span>1</span><strong>Dados pessoais</strong><small>Cadastro preenchido</small></div>
+        <div class="step-final"><span>2</span><strong>Validação</strong><small>Confirmação de identidade</small></div>
+        <div class="step-final"><span>3</span><strong>Conta criada</strong><small>Acesso liberado</small></div>
+      </div>
+
+      <button id="nextStepFinal" class="bank-submit-final" type="button">Avançar</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
