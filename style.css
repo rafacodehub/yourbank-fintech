@@ -6257,3 +6257,636 @@ body{
     grid-template-columns:1fr !important;
   }
 }
+
+
+/* ===================================================
+   IOS SAFARI FIX - REMOVE WHITE BACKGROUNDS
+   =================================================== */
+
+html,
+body{
+    background:#07000f !important;
+    color:#ffffff !important;
+    -webkit-text-size-adjust:100%;
+}
+
+/* Remove iOS white rendering */
+section,
+div,
+article,
+main{
+    background-clip:padding-box !important;
+}
+
+/* Strong dark backgrounds */
+.hero,
+.features,
+.security-section,
+.choose-card-section,
+.testimonials,
+.faq-section,
+.footer,
+.private-section,
+.business-section,
+.banking-panel-section{
+    background:
+    radial-gradient(circle at top, rgba(125,42,255,.12), transparent 45%),
+    #090011 !important;
+}
+
+/* Fix cards turning white on Safari */
+.feature,
+.security-card,
+.choose-card,
+.testimonial,
+.faq-list details,
+.account-overview-card,
+.transactions-card,
+.security-status-card,
+.phone-shell,
+.balance-card,
+.spend-card,
+.final-cta,
+.private-card,
+.business-card{
+    background:rgba(18, 8, 32, 0.96) !important;
+    border:1px solid rgba(255,255,255,0.06) !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    box-shadow:
+      0 10px 30px rgba(0,0,0,.25),
+      inset 0 1px 0 rgba(255,255,255,.03) !important;
+}
+
+/* Text always visible */
+.feature *,
+.security-card *,
+.choose-card *,
+.testimonial *,
+.hero *,
+.private-card *,
+.final-cta *,
+.account-overview-card *,
+.transactions-card *,
+.security-status-card *{
+    color:#ffffff !important;
+}
+
+/* Secondary text */
+.feature p,
+.security-card p,
+.choose-card p,
+.testimonial p,
+.hero p,
+.private-card p{
+    color:rgba(255,255,255,.72) !important;
+}
+
+/* Buttons */
+.primary-btn{
+    background:linear-gradient(135deg,#a855ff,#6d00ff) !important;
+    color:#fff !important;
+}
+
+/* Fix transparent overlays */
+.hero::before,
+.hero::after,
+section::before,
+section::after{
+    opacity:.35 !important;
+}
+
+/* iPhone safe area */
+body{
+    padding-bottom:env(safe-area-inset-bottom);
+}
+
+/* Mobile final polishing */
+@media(max-width:768px){
+
+    body{
+        overflow-x:hidden !important;
+    }
+
+    .hero{
+        padding-top:120px !important;
+    }
+
+    .hero h1{
+        font-size:44px !important;
+        line-height:1.05 !important;
+    }
+
+    .choose-card{
+        background:#12081f !important;
+    }
+
+    .security-main{
+        background:#140a24 !important;
+    }
+
+    .feature-grid,
+    .security-grid{
+        gap:14px !important;
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE POLIDO FINAL - SEM CARDS AMASSADOS / RODAPÉ ALINHADO
+   ========================================================= */
+
+@media(max-width:768px){
+
+  :root{
+    --mobile-card-bg:rgba(18,8,32,.94);
+    --mobile-line:rgba(255,255,255,.09);
+  }
+
+  html,
+  body{
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:hidden !important;
+    background:#07000f !important;
+  }
+
+  body{
+    color:#fff !important;
+  }
+
+  main{
+    width:100% !important;
+    overflow:hidden !important;
+  }
+
+  /* Header mais estável */
+  .navbar{
+    height:auto !important;
+    min-height:78px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:14px 20px !important;
+  }
+
+  .logo{
+    min-width:0 !important;
+  }
+
+  .logo strong{
+    font-size:30px !important;
+    letter-spacing:1.7px !important;
+    white-space:nowrap !important;
+  }
+
+  .logo span{
+    font-size:11px !important;
+    letter-spacing:2.8px !important;
+  }
+
+  .menu-toggle{
+    width:50px !important;
+    height:50px !important;
+    min-width:50px !important;
+    border-radius:17px !important;
+  }
+
+  /* Container único e limpo */
+  .section,
+  .hero,
+  .features,
+  .private-section,
+  .card-rule-section,
+  .fintech-lab-section,
+  .choose-card-section,
+  .testimonials,
+  .faq-section,
+  .banking-panel-section,
+  .business-tariffs-section,
+  .footer{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  .hero{
+    padding-top:126px !important;
+    padding-bottom:44px !important;
+  }
+
+  .hero h1{
+    font-size:40px !important;
+    line-height:1.12 !important;
+    letter-spacing:-1.2px !important;
+    max-width:100% !important;
+  }
+
+  .hero p{
+    font-size:15px !important;
+    line-height:1.58 !important;
+  }
+
+  .buttons{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  .primary-btn,
+  .video-btn{
+    height:54px !important;
+    width:100% !important;
+    border-radius:16px !important;
+    padding:0 18px !important;
+  }
+
+  /* Remove deformações causadas por grid antigo */
+  .feature,
+  .security-card,
+  .choose-card,
+  .testimonial,
+  .account-overview-card,
+  .transactions-card,
+  .security-status-card,
+  .private-card,
+  .wealth-panel,
+  .phone-shell,
+  .calculator-card,
+  .business-card,
+  .tariffs-card,
+  .faq-list details{
+    min-height:unset !important;
+    height:auto !important;
+    aspect-ratio:auto !important;
+    transform:none !important;
+    display:block !important;
+  }
+
+  /* Grade bonita, sem parecer lista */
+  .feature-grid,
+  .security-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:14px !important;
+  }
+
+  .feature,
+  .security-card{
+    padding:18px !important;
+    border-radius:22px !important;
+    background:var(--mobile-card-bg) !important;
+    border:1px solid var(--mobile-line) !important;
+  }
+
+  .feature i,
+  .security-card i{
+    width:44px !important;
+    height:44px !important;
+    font-size:18px !important;
+    border-radius:14px !important;
+    margin-bottom:14px !important;
+  }
+
+  .feature h3,
+  .security-card h3{
+    font-size:16px !important;
+    line-height:1.18 !important;
+    margin-bottom:8px !important;
+  }
+
+  .feature p,
+  .security-card p{
+    font-size:12px !important;
+    line-height:1.45 !important;
+    color:rgba(255,255,255,.72) !important;
+  }
+
+  /* Segurança principal horizontal bonita */
+  .security-section{
+    padding-top:34px !important;
+    padding-bottom:34px !important;
+  }
+
+  .security-main{
+    display:grid !important;
+    grid-template-columns:58px 1fr !important;
+    gap:14px !important;
+    align-items:center !important;
+    padding:18px !important;
+    border-radius:24px !important;
+    background:var(--mobile-card-bg) !important;
+  }
+
+  .security-lock{
+    width:58px !important;
+    height:58px !important;
+    min-width:58px !important;
+    border-radius:18px !important;
+  }
+
+  .security-lock i{
+    font-size:25px !important;
+  }
+
+  .security-copy .tag{
+    display:none !important;
+  }
+
+  .security-copy h2{
+    font-size:22px !important;
+    line-height:1.15 !important;
+    margin:0 0 6px !important;
+  }
+
+  .security-copy p{
+    font-size:12px !important;
+    line-height:1.4 !important;
+  }
+
+  /* Escolha dos cartões: cards horizontais reais, não esticados */
+  .choose-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+
+  .choose-card{
+    position:relative !important;
+    padding:16px !important;
+    border-radius:22px !important;
+    background:var(--mobile-card-bg) !important;
+    border:1px solid var(--mobile-line) !important;
+    display:grid !important;
+    grid-template-columns:112px 1fr !important;
+    gap:14px !important;
+    align-items:center !important;
+    min-height:150px !important;
+  }
+
+  .choose-card .mini-card{
+    width:112px !important;
+    height:72px !important;
+    margin:0 !important;
+    border-radius:16px !important;
+    grid-row:1 / span 4 !important;
+  }
+
+  .choose-card h3{
+    font-size:18px !important;
+    margin:0 0 4px !important;
+  }
+
+  .choose-card p{
+    font-size:12px !important;
+    line-height:1.35 !important;
+    margin:0 !important;
+  }
+
+  .choose-card ul{
+    margin:8px 0 !important;
+    gap:4px !important;
+  }
+
+  .choose-card li{
+    font-size:11.5px !important;
+    line-height:1.25 !important;
+  }
+
+  .request-card{
+    grid-column:2 !important;
+    height:38px !important;
+    padding:0 12px !important;
+    font-size:12px !important;
+    border-radius:12px !important;
+  }
+
+  .popular-badge{
+    position:absolute !important;
+    top:10px !important;
+    right:10px !important;
+    font-size:8px !important;
+    padding:6px 9px !important;
+  }
+
+  /* Dashboard e painéis: compactos mas respirando */
+  .banking-panel-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+
+  .account-overview-card,
+  .transactions-card,
+  .security-status-card{
+    padding:18px !important;
+    border-radius:22px !important;
+    background:var(--mobile-card-bg) !important;
+  }
+
+  .account-actions{
+    display:grid !important;
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:8px !important;
+  }
+
+  .account-actions button{
+    height:58px !important;
+    padding:8px 5px !important;
+    border-radius:14px !important;
+    font-size:11px !important;
+  }
+
+  .transaction-list{
+    gap:8px !important;
+  }
+
+  .transaction-item{
+    display:grid !important;
+    grid-template-columns:34px 1fr auto !important;
+    gap:8px !important;
+    align-items:center !important;
+    padding:10px !important;
+  }
+
+  .transaction-item b{
+    grid-column:auto !important;
+    font-size:11px !important;
+  }
+
+  .security-status-list li{
+    font-size:12px !important;
+    padding:9px 0 !important;
+  }
+
+  /* App fake sem blocos brancos */
+  .phone-shell,
+  .balance-card,
+  .spend-card,
+  .calculator-card{
+    background:var(--mobile-card-bg) !important;
+    border:1px solid var(--mobile-line) !important;
+    box-shadow:0 12px 32px rgba(0,0,0,.25) !important;
+  }
+
+  .phone-shell{
+    padding:18px !important;
+    border-radius:24px !important;
+  }
+
+  .balance-card,
+  .spend-card{
+    padding:16px !important;
+    border-radius:18px !important;
+  }
+
+  .quick-actions{
+    display:grid !important;
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:8px !important;
+  }
+
+  .quick-actions button{
+    height:70px !important;
+    border-radius:16px !important;
+    font-size:11px !important;
+  }
+
+  .balance-card strong,
+  .panel-top strong,
+  .account-balance-block strong{
+    font-size:26px !important;
+  }
+
+  /* Depoimentos sem quadrados gigantes */
+  .testimonial-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+  }
+
+  .testimonial{
+    padding:18px !important;
+    border-radius:20px !important;
+    min-height:unset !important;
+  }
+
+  .testimonial p{
+    font-size:13px !important;
+    line-height:1.45 !important;
+  }
+
+  /* Rodapé alinhado */
+  .footer{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+    padding-top:30px !important;
+    padding-bottom:24px !important;
+    border-top:1px solid rgba(255,255,255,.08) !important;
+  }
+
+  .footer-brand,
+  .footer-grid,
+  .footer-grid > div{
+    width:100% !important;
+    text-align:left !important;
+  }
+
+  .footer-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:22px 18px !important;
+  }
+
+  .footer h3{
+    font-size:13px !important;
+    margin-bottom:10px !important;
+  }
+
+  .footer a{
+    font-size:12px !important;
+    margin-bottom:7px !important;
+  }
+
+  .footer-socials{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+    margin-top:12px !important;
+  }
+
+  .footer-socials a{
+    width:38px !important;
+    height:38px !important;
+    margin:0 !important;
+  }
+
+  /* Remove qualquer linha/barra desalinhada */
+  .footer::before,
+  .footer::after,
+  .footer-grid::before,
+  .footer-grid::after{
+    display:none !important;
+  }
+
+  /* CTA final */
+  .final-cta{
+    display:grid !important;
+    grid-template-columns:52px 1fr !important;
+    gap:14px !important;
+    align-items:center !important;
+    padding:20px !important;
+  }
+
+  .final-cta .primary-btn{
+    grid-column:1 / -1 !important;
+  }
+
+  .rocket,
+  .company-icon{
+    width:52px !important;
+    height:52px !important;
+    border-radius:16px !important;
+  }
+}
+
+@media(max-width:390px){
+  .feature-grid,
+  .security-grid{
+    gap:10px !important;
+  }
+
+  .feature,
+  .security-card{
+    padding:15px !important;
+  }
+
+  .feature h3,
+  .security-card h3{
+    font-size:15px !important;
+  }
+
+  .feature p,
+  .security-card p{
+    font-size:11.5px !important;
+  }
+
+  .choose-card{
+    grid-template-columns:96px 1fr !important;
+    gap:12px !important;
+  }
+
+  .choose-card .mini-card{
+    width:96px !important;
+    height:62px !important;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr !important;
+  }
+}
