@@ -8218,3 +8218,375 @@ body{
     opacity:.50 !important;
   }
 }
+
+
+/* =========================================================
+   REFINO FINAL - MOBILE HORIZONTAL + SEM DUPLICIDADE
+   ========================================================= */
+
+/* Remove o painel duplicado de simulação de abertura em todas as telas */
+.account-simulation-section,
+.opening-simulation-section,
+.account-flow-section,
+section:has(.primary-btn.open-account-flow):has(.tag):has(h2){
+  /* aplicado por navegadores modernos; fallback abaixo via classes específicas */
+}
+
+/* =========================================================
+   DESKTOP E MOBILE: esconder painel duplicado de abertura/simulação
+   ========================================================= */
+
+/* Seção grande com "Abra sua conta com poucos passos" */
+.card-rule-section{
+  display:none !important;
+}
+
+/* FAQ mais limpo: remove seta triangular extra */
+.faq-list summary{
+  list-style:none !important;
+}
+
+.faq-list summary::-webkit-details-marker{
+  display:none !important;
+}
+
+.faq-list summary::before{
+  content:none !important;
+  display:none !important;
+}
+
+/* Mantém somente o + à direita */
+.faq-list summary::after{
+  content:'+' !important;
+}
+
+/* Mobile final */
+@media(max-width:768px){
+
+  html,
+  body{
+    overflow-x:hidden !important;
+    background:#07000f !important;
+  }
+
+  /* Cartões no fundo da home: grande, lateral e sem conflito com textos */
+  .hero{
+    position:relative !important;
+    overflow:hidden !important;
+    padding-bottom:96px !important;
+  }
+
+  .hero-content{
+    position:relative !important;
+    z-index:3 !important;
+  }
+
+  .hero::after{
+    content:'' !important;
+    position:absolute !important;
+    right:-90px !important;
+    bottom:8px !important;
+    width:310px !important;
+    height:210px !important;
+    border-radius:36px !important;
+    background:
+      linear-gradient(145deg, rgba(255,77,180,.92), rgba(120,0,255,.82));
+    transform:rotate(-12deg) !important;
+    opacity:.28 !important;
+    filter:blur(.2px) !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+  }
+
+  .hero-visual{
+    display:block !important;
+    position:absolute !important;
+    right:-150px !important;
+    bottom:6px !important;
+    width:360px !important;
+    height:235px !important;
+    min-width:0 !important;
+    opacity:.36 !important;
+    pointer-events:none !important;
+    z-index:1 !important;
+    transform:rotate(-5deg) scale(.92) !important;
+    overflow:visible !important;
+  }
+
+  .hero-visual .orbit-line,
+  .hero-visual .finance-badge{
+    display:none !important;
+  }
+
+  .hero-visual .card{
+    position:absolute !important;
+    width:122px !important;
+    height:186px !important;
+    border-radius:18px !important;
+    box-shadow:0 18px 48px rgba(0,0,0,.38) !important;
+  }
+
+  .hero-visual .pink-card{
+    left:20px !important;
+    top:48px !important;
+    transform:rotate(-14deg) !important;
+    z-index:1 !important;
+  }
+
+  .hero-visual .black-card{
+    left:108px !important;
+    top:18px !important;
+    transform:rotate(0deg) !important;
+    z-index:3 !important;
+  }
+
+  .hero-visual .purple-card{
+    left:196px !important;
+    top:44px !important;
+    transform:rotate(14deg) !important;
+    z-index:2 !important;
+  }
+
+  .hero-visual .card span{
+    font-size:0 !important;
+  }
+
+  .hero-visual .chip{
+    width:26px !important;
+    height:19px !important;
+    top:18px !important;
+    left:16px !important;
+    border-radius:6px !important;
+  }
+
+  .hero-visual .wifi{
+    right:14px !important;
+    top:18px !important;
+    font-size:11px !important;
+  }
+
+  .hero-visual .mastercard{
+    right:12px !important;
+    bottom:14px !important;
+  }
+
+  .hero-visual .mastercard span{
+    width:18px !important;
+    height:18px !important;
+  }
+
+  /* O cartão de fundo nunca pode ficar por cima do CTA */
+  .buttons{
+    position:relative !important;
+    z-index:4 !important;
+  }
+
+  /* Painéis horizontais refinados */
+  .feature-grid,
+  .security-grid,
+  .business-features,
+  .choose-grid,
+  .banking-panel-grid,
+  .testimonial-grid{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:14px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scroll-snap-type:x mandatory !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding:2px 4px 16px !important;
+  }
+
+  .feature-grid::-webkit-scrollbar,
+  .security-grid::-webkit-scrollbar,
+  .business-features::-webkit-scrollbar,
+  .choose-grid::-webkit-scrollbar,
+  .banking-panel-grid::-webkit-scrollbar,
+  .testimonial-grid::-webkit-scrollbar{
+    display:none !important;
+    height:0 !important;
+  }
+
+  .feature,
+  .security-card,
+  .business-features div{
+    flex:0 0 72% !important;
+    max-width:72% !important;
+    min-height:205px !important;
+    scroll-snap-align:center !important;
+  }
+
+  /* Segurança principal não fica transparente */
+  .security-main{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+  }
+
+  .security-card{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+  }
+
+  /* Recursos financeiros/benefícios com cards horizontais */
+  .feature{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+    border-radius:22px !important;
+    padding:18px !important;
+  }
+
+  .feature h3,
+  .security-card h3{
+    font-size:18px !important;
+    line-height:1.18 !important;
+  }
+
+  .feature p,
+  .security-card p{
+    font-size:13px !important;
+    line-height:1.48 !important;
+  }
+
+  /* Cartões de pedido continuam horizontais */
+  .choose-card{
+    flex:0 0 84% !important;
+    max-width:84% !important;
+    min-height:390px !important;
+    scroll-snap-align:center !important;
+  }
+
+  /* Investimentos: horizontal e menor altura */
+  .private-card{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:14px !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    -webkit-overflow-scrolling:touch !important;
+    padding:18px !important;
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+  }
+
+  .private-card::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .private-card > div,
+  .private-card > article,
+  .private-card > .wealth-panel{
+    flex:0 0 86% !important;
+    max-width:86% !important;
+    scroll-snap-align:center !important;
+  }
+
+  .private-card > div:first-child{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+    border-radius:24px !important;
+    padding:22px !important;
+  }
+
+  .wealth-panel{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+    border-radius:24px !important;
+    padding:20px !important;
+  }
+
+  .chart-bars{
+    height:132px !important;
+    margin:22px 0 !important;
+  }
+
+  /* Comparador inteligente horizontal */
+  .card-comparison,
+  .compare-card,
+  .smart-compare,
+  .comparison-card{
+    overflow-x:auto !important;
+  }
+
+  .compare-options,
+  .card-options,
+  .compare-benefits,
+  #compareBenefits{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:10px !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    padding-bottom:8px !important;
+  }
+
+  #compareBenefits li,
+  .compare-benefits li{
+    flex:0 0 78% !important;
+    max-width:78% !important;
+    scroll-snap-align:center !important;
+    white-space:normal !important;
+  }
+
+  /* FAQ penúltimo visualmente: remove altura excessiva e ícones extras */
+  .faq-section{
+    padding-top:42px !important;
+    padding-bottom:42px !important;
+  }
+
+  .faq-list details{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+  }
+
+  .faq-list summary{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:14px !important;
+    font-size:15px !important;
+  }
+
+  .faq-list summary::before{
+    display:none !important;
+    content:none !important;
+  }
+
+  .faq-list summary::after{
+    content:'+' !important;
+    color:#c084fc !important;
+    margin-left:auto !important;
+  }
+
+  /* Abertura de conta única: mantém só CTA final que abre conta */
+  .final-cta{
+    background:rgba(17,8,31,.98) !important;
+    border:1px solid rgba(255,255,255,.09) !important;
+  }
+}
+
+@media(max-width:390px){
+  .feature,
+  .security-card,
+  .business-features div{
+    flex-basis:78% !important;
+    max-width:78% !important;
+  }
+
+  .choose-card,
+  .account-overview-card,
+  .transactions-card,
+  .security-status-card,
+  .private-card > div,
+  .private-card > article,
+  .private-card > .wealth-panel{
+    flex-basis:88% !important;
+    max-width:88% !important;
+  }
+
+  .hero-visual{
+    right:-165px !important;
+    opacity:.32 !important;
+  }
+}
