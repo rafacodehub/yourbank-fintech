@@ -8886,33 +8886,16 @@ section:has(.ai-actions):has(.tag){
 
 
 /* =========================================================
-   CORREÇÃO FINAL - VÍDEO / COMPARADOR / ASSISTENTE / CARROSSEL
+   AJUSTES SEGUROS - NÃO REMOVE HTML
    ========================================================= */
 
-/* Remove painel antigo de assistente financeiro em PC e celular */
-.ai-section,
-.assistant-section,
-.financial-assistant-section,
-.smart-assistant-section,
-.fintech-assistant,
-.assistant-card,
-section:has(.search-tags),
-section:has(.ai-actions),
-section:has(.assistant-card),
-section:has(.chat-bubble),
-section:has(.ai-result),
-section:has(.ai-response){
-  display:none !important;
-}
-
-/* Botão Ver vídeo corrigido no PC e mobile */
+/* Corrigir botão Ver vídeo no PC e celular */
 .video-btn,
 .demo-btn{
   background:rgba(255,255,255,.035) !important;
   border:1px solid rgba(255,255,255,.12) !important;
   color:#fff !important;
   box-shadow:none !important;
-  overflow:hidden !important;
 }
 
 .video-btn .play,
@@ -8923,39 +8906,41 @@ section:has(.ai-response){
   height:46px !important;
   min-width:46px !important;
   border-radius:50% !important;
-  background:#fff !important;
-  color:#13001f !important;
+  background:#ffffff !important;
+  color:#12001d !important;
   display:grid !important;
   place-items:center !important;
-  box-shadow:0 10px 24px rgba(0,0,0,.22) !important;
+  overflow:hidden !important;
 }
 
 .video-btn .play i,
 .demo-btn .play i,
 .play i{
-  color:#13001f !important;
+  color:#12001d !important;
   font-size:15px !important;
   line-height:1 !important;
   display:block !important;
   transform:translateX(1px) !important;
+  z-index:2 !important;
 }
 
-/* fallback caso o ícone não carregue */
 .video-btn .play::after,
 .demo-btn .play::after,
 .play::after{
   content:'' !important;
-  display:block !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  transform:translate(-35%, -50%) !important;
   width:0 !important;
   height:0 !important;
   border-top:7px solid transparent !important;
   border-bottom:7px solid transparent !important;
-  border-left:11px solid #13001f !important;
-  margin-left:3px !important;
-  position:absolute !important;
+  border-left:11px solid #12001d !important;
+  z-index:1 !important;
 }
 
-/* Comparador inteligente: não cortar texto no PC */
+/* Comparador inteligente sem cortar palavras no PC */
 .compare-options,
 .card-options{
   display:flex !important;
@@ -8971,30 +8956,45 @@ section:has(.ai-response){
   gap:12px !important;
   overflow:visible !important;
   width:100% !important;
+  max-width:100% !important;
 }
 
 .compare-benefits li,
 #compareBenefits li{
   min-width:0 !important;
   width:100% !important;
+  max-width:100% !important;
   white-space:normal !important;
   overflow:visible !important;
   text-overflow:clip !important;
   word-break:normal !important;
 }
 
-/* Se o comparador estiver dentro de um card, permite conteúdo respirar */
 .compare-card,
 .smart-compare,
-.comparison-card,
-section:has(#compareBenefits){
+.comparison-card{
   overflow:visible !important;
 }
 
-/* Animações sutis para cards/carrosséis */
-@keyframes mobileFloatIn{
+/* Ocultar visualmente apenas o bloco antigo de assistente financeiro SEM apagar HTML.
+   Usa seletores mais específicos e não afeta o restante da página. */
+.assistant-card,
+.financial-assistant-section,
+.smart-assistant-section,
+.fintech-assistant{
+  display:none !important;
+}
+
+/* Caso o painel antigo não tenha classe própria, escondemos apenas blocos com tags internas específicas */
+section:has(.ai-actions),
+section:has(.search-tags.ai-tags){
+  display:none !important;
+}
+
+/* Animação leve dos carrosséis */
+@keyframes carouselSoftEnter{
   from{
-    opacity:.65;
+    opacity:.75;
     transform:translateY(12px) scale(.98);
   }
   to{
@@ -9003,15 +9003,14 @@ section:has(#compareBenefits){
   }
 }
 
-.reveal,
+.choose-card,
 .feature,
 .security-card,
-.choose-card,
+.testimonial,
 .account-overview-card,
 .transactions-card,
-.security-status-card,
-.testimonial{
-  animation:mobileFloatIn .55s ease both;
+.security-status-card{
+  animation:carouselSoftEnter .5s ease both;
 }
 
 @media(max-width:768px){
@@ -9036,22 +9035,6 @@ section:has(#compareBenefits){
     border-top-width:6px !important;
     border-bottom-width:6px !important;
     border-left-width:9px !important;
-  }
-
-  /* Remove painel assistente no celular também */
-  .ai-section,
-  .assistant-section,
-  .financial-assistant-section,
-  .smart-assistant-section,
-  .fintech-assistant,
-  .assistant-card,
-  section:has(.search-tags),
-  section:has(.ai-actions),
-  section:has(.assistant-card),
-  section:has(.chat-bubble),
-  section:has(.ai-result),
-  section:has(.ai-response){
-    display:none !important;
   }
 
   /* Comparador no mobile em carrossel sem cortar texto */
@@ -9087,17 +9070,20 @@ section:has(#compareBenefits){
   .card-options{
     display:flex !important;
     flex-wrap:nowrap !important;
-    overflow-x:auto !important;
     gap:10px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scroll-snap-type:x mandatory !important;
+    -webkit-overflow-scrolling:touch !important;
     padding-bottom:8px !important;
   }
 
   .compare-options button,
   .card-options button{
     flex:0 0 auto !important;
+    scroll-snap-align:center !important;
   }
 
-  /* animações ao deslizar carrossel */
   .choose-grid,
   .banking-panel-grid,
   .testimonial-grid,
@@ -9106,6 +9092,7 @@ section:has(#compareBenefits){
   .compare-benefits,
   #compareBenefits{
     scroll-behavior:smooth !important;
+    -webkit-overflow-scrolling:touch !important;
     perspective:900px !important;
   }
 
@@ -9121,9 +9108,9 @@ section:has(#compareBenefits){
     transition:
       transform .28s ease,
       opacity .28s ease,
-      border-color .28s ease,
-      box-shadow .28s ease !important;
-    will-change:transform !important;
+      box-shadow .28s ease,
+      border-color .28s ease !important;
+    will-change:transform, opacity !important;
   }
 
   .choose-card:active,
@@ -9134,18 +9121,5 @@ section:has(#compareBenefits){
   .feature:active,
   .security-card:active{
     transform:scale(.985) !important;
-  }
-
-  /* Indicador visual leve de rolagem lateral */
-  .choose-card-section .section-heading::after,
-  .banking-panel-section .section-heading::after,
-  .testimonials .section-heading::after{
-    content:'deslize para ver mais →' !important;
-    display:block !important;
-    margin-top:10px !important;
-    color:rgba(201,167,255,.72) !important;
-    font-size:12px !important;
-    font-weight:700 !important;
-    letter-spacing:.2px !important;
   }
 }

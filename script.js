@@ -1091,16 +1091,22 @@ document.addEventListener('keydown', event => {
 
 
 /* =========================================================
-   REALCE SUAVE DOS CARROSSÉIS MOBILE
+   REALCE SEGURO DOS CARROSSÉIS MOBILE
    ========================================================= */
 (function(){
-  const carousels = document.querySelectorAll('.choose-grid, .banking-panel-grid, .testimonial-grid, .feature-grid, .security-grid');
+  const carousels = document.querySelectorAll(
+    '.choose-grid, .banking-panel-grid, .testimonial-grid, .feature-grid, .security-grid'
+  );
 
   function updateCarouselItems(carousel){
+    if(window.innerWidth > 768) return;
+
     const rect = carousel.getBoundingClientRect();
     const center = rect.left + rect.width / 2;
 
-    carousel.querySelectorAll('.choose-card, .account-overview-card, .transactions-card, .security-status-card, .testimonial, .feature, .security-card').forEach(item => {
+    carousel.querySelectorAll(
+      '.choose-card, .account-overview-card, .transactions-card, .security-status-card, .testimonial, .feature, .security-card'
+    ).forEach(item => {
       const itemRect = item.getBoundingClientRect();
       const itemCenter = itemRect.left + itemRect.width / 2;
       const distance = Math.abs(center - itemCenter);
@@ -1108,7 +1114,7 @@ document.addEventListener('keydown', event => {
       const ratio = Math.max(0, 1 - distance / max);
 
       const scale = 0.965 + ratio * 0.035;
-      const opacity = 0.72 + ratio * 0.28;
+      const opacity = 0.74 + ratio * 0.26;
 
       item.style.transform = `scale(${scale})`;
       item.style.opacity = opacity;
