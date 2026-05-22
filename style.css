@@ -5422,298 +5422,222 @@ body{
 
 
 /* =========================================================
-   RESPONSIVO FINAL - PC + CELULAR NO MESMO CÓDIGO
+   CORREÇÃO MOBILE FORTE - SEM VAZAMENTO LATERAL
    ========================================================= */
 
-/* Evita estouro horizontal em qualquer tela */
 html,
 body{
-  width:100%;
-  max-width:100%;
+  width:100% !important;
+  max-width:100% !important;
   overflow-x:hidden !important;
 }
 
-img,
-video,
-canvas,
-svg{
+*{
   max-width:100%;
 }
 
-/* Ajuste intermediário para notebooks/tablets */
-@media(max-width:1180px){
-  .section{
-    width:calc(100% - 32px) !important;
-  }
-
-  .navbar{
-    width:calc(100% - 28px) !important;
-    gap:18px !important;
-  }
-
-  .hero-content,
-  .private-card,
-  .fintech-lab-section,
-  .app-dashboard,
-  .banking-panel-grid,
-  .business-tariffs-section,
-  .business-card{
-    grid-template-columns:1fr !important;
-  }
-
-  .hero-content{
-    gap:34px !important;
-    min-height:auto !important;
-  }
-
-  .hero-visual{
-    margin-inline:auto !important;
-  }
-
-  .feature-grid{
-    grid-template-columns:repeat(2, 1fr) !important;
-  }
-
-  .choose-grid,
-  .testimonial-grid{
-    grid-template-columns:1fr !important;
-  }
-}
-
-/* Mobile principal */
 @media(max-width:768px){
+
+  html,
+  body{
+    overflow-x:hidden !important;
+    position:relative !important;
+  }
 
   body{
     background:
-      radial-gradient(circle at 20% 4%, rgba(139,46,255,.20), transparent 34%),
+      radial-gradient(circle at 50% 0%, rgba(139,46,255,.18), transparent 38%),
       linear-gradient(180deg,#050008 0%,#0b0016 100%) !important;
   }
 
-  .section{
-    width:calc(100% - 24px) !important;
-    margin-inline:auto !important;
+  .section,
+  .hero,
+  .features,
+  .private-section,
+  .card-rule-section,
+  .fintech-lab-section,
+  .choose-card-section,
+  .testimonials,
+  .faq-section,
+  .banking-panel-section,
+  .business-tariffs-section,
+  .footer{
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+    overflow:hidden !important;
   }
 
-  /* Header mobile limpo */
+  /* Header */
   .navbar{
-    top:10px !important;
-    width:calc(100% - 20px) !important;
-    min-height:68px !important;
-    padding:12px 14px !important;
-    border-radius:22px !important;
-    gap:10px !important;
-  }
-
-  .navbar.scrolled{
-    top:8px !important;
-    min-height:64px !important;
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    transform:none !important;
+    width:100% !important;
+    max-width:100% !important;
+    border-radius:0 !important;
+    padding:14px 18px !important;
+    min-height:82px !important;
+    background:rgba(5,0,14,.96) !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    border-top:0 !important;
   }
 
   .logo strong{
-    font-size:22px !important;
-    letter-spacing:1.4px !important;
+    font-size:32px !important;
+    line-height:1 !important;
+    letter-spacing:2px !important;
   }
 
   .logo span{
-    margin-top:4px !important;
-    font-size:10px !important;
-    letter-spacing:1.2px !important;
+    font-size:13px !important;
+    letter-spacing:2.5px !important;
+    margin-top:8px !important;
   }
 
   .menu-toggle{
     display:grid !important;
     place-items:center !important;
-    width:42px !important;
-    height:42px !important;
-    border-radius:14px !important;
-    flex:0 0 auto !important;
+    width:54px !important;
+    height:54px !important;
+    min-width:54px !important;
+    border-radius:18px !important;
+  }
+
+  .nav-search,
+  .login,
+  .account-btn{
+    display:none !important;
   }
 
   .nav-links{
     position:absolute !important;
-    left:0 !important;
-    right:0 !important;
-    top:calc(100% + 10px) !important;
+    left:18px !important;
+    right:18px !important;
+    top:92px !important;
+    width:auto !important;
+    transform:none !important;
     display:none !important;
     flex-direction:column !important;
     align-items:flex-start !important;
-    gap:14px !important;
+    gap:16px !important;
     padding:18px !important;
-    border-radius:20px !important;
-    background:rgba(8,3,18,.96) !important;
-    border:1px solid rgba(255,255,255,.10) !important;
-    transform:none !important;
+    border-radius:18px !important;
+    background:rgba(8,3,18,.98) !important;
   }
 
   .nav-links.active{
     display:flex !important;
   }
 
-  .nav-links a{
-    font-size:14px !important;
-  }
-
-  .nav-actions{
-    gap:8px !important;
-  }
-
-  .nav-search,
-  .login{
-    display:none !important;
-  }
-
-  .account-btn{
-    display:none !important;
-  }
-
-  /* Hero mobile */
+  /* Hero limpo */
   .hero{
+    padding-top:130px !important;
+    padding-bottom:34px !important;
     min-height:auto !important;
-    padding-top:108px !important;
-    padding-bottom:32px !important;
   }
 
   .hero-content{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:26px !important;
+    display:block !important;
     min-height:auto !important;
+    width:100% !important;
+    max-width:100% !important;
   }
 
   .hero-copy{
-    text-align:left !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
   }
 
-  .tag,
-  .tag.small{
-    font-size:10px !important;
-    padding:8px 12px !important;
-    letter-spacing:1px !important;
+  .tag{
+    font-size:11px !important;
+    padding:9px 14px !important;
+    letter-spacing:1.4px !important;
   }
 
   .hero h1{
-    margin-top:18px !important;
-    margin-bottom:14px !important;
-    font-size:clamp(34px, 10vw, 46px) !important;
-    line-height:1.08 !important;
-    letter-spacing:-1.6px !important;
+    width:100% !important;
     max-width:100% !important;
+    font-size:40px !important;
+    line-height:1.08 !important;
+    letter-spacing:-1.4px !important;
+    margin:28px 0 18px !important;
+    white-space:normal !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
   }
 
   .hero p{
-    font-size:15px !important;
-    line-height:1.55 !important;
+    width:100% !important;
     max-width:100% !important;
+    font-size:16px !important;
+    line-height:1.6 !important;
+    overflow-wrap:break-word !important;
   }
 
   .buttons{
-    width:100% !important;
     display:grid !important;
     grid-template-columns:1fr !important;
-    gap:12px !important;
-    margin-top:22px !important;
+    gap:14px !important;
+    width:100% !important;
+    margin-top:26px !important;
   }
 
   .primary-btn,
   .video-btn{
     width:100% !important;
     min-width:0 !important;
+    max-width:100% !important;
     justify-content:center !important;
-    padding:13px 16px !important;
-    border-radius:14px !important;
-    font-size:14px !important;
-  }
-
-  .play{
-    width:34px !important;
-    height:34px !important;
-  }
-
-  /* Cartões do topo no mobile */
-  .hero-visual{
-    width:100% !important;
-    min-width:0 !important;
-    height:330px !important;
-    transform:none !important;
-    margin:0 auto !important;
-    overflow:visible !important;
-  }
-
-  .orbit-line,
-  .finance-badge{
-    display:none !important;
-  }
-
-  .card{
-    width:145px !important;
-    height:230px !important;
-    border-radius:20px !important;
-  }
-
-  .pink-card{
-    left:4% !important;
-    top:58px !important;
-    transform:rotate(-10deg) !important;
-  }
-
-  .black-card{
-    left:50% !important;
-    top:24px !important;
-    transform:translateX(-50%) rotate(0deg) !important;
-    z-index:5 !important;
-  }
-
-  .purple-card{
-    right:4% !important;
-    top:62px !important;
-    transform:rotate(10deg) !important;
-  }
-
-  .card span{
-    left:18px !important;
-    bottom:22px !important;
-    font-size:14px !important;
-  }
-
-  .chip{
-    width:34px !important;
-    height:25px !important;
-    top:22px !important;
-    left:20px !important;
-    border-radius:7px !important;
-  }
-
-  .wifi{
-    right:20px !important;
-    top:24px !important;
+    padding:15px 18px !important;
+    border-radius:16px !important;
     font-size:15px !important;
   }
 
-  .mastercard{
-    right:18px !important;
-    bottom:18px !important;
+  .video-btn .play,
+  .play{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
   }
 
-  .mastercard span{
-    width:24px !important;
-    height:24px !important;
+  /* O showcase de cartões estava vazando no mobile */
+  .hero-visual{
+    display:none !important;
   }
 
-  /* Seções mais compactas */
+  .orbit-line,
+  .finance-badge,
+  .hero-bg{
+    display:none !important;
+  }
+
+  /* Seções */
   .features,
+  .private-section,
+  .card-rule-section,
+  .fintech-lab-section,
   .choose-card-section,
   .testimonials,
   .faq-section,
-  .private-section,
-  .fintech-lab-section,
   .banking-panel-section,
   .business-tariffs-section{
-    padding-block:38px !important;
+    padding-top:42px !important;
+    padding-bottom:42px !important;
   }
 
   .section-heading{
-    margin-bottom:24px !important;
     text-align:left !important;
+    margin:0 0 24px !important;
+    width:100% !important;
+    max-width:100% !important;
   }
 
   .section-heading h2,
@@ -5723,9 +5647,12 @@ svg{
   .final-cta h2,
   .security-copy h2,
   .business-card h2{
-    font-size:clamp(26px, 8vw, 34px) !important;
+    font-size:30px !important;
     line-height:1.15 !important;
     letter-spacing:-.8px !important;
+    margin-top:14px !important;
+    white-space:normal !important;
+    overflow-wrap:break-word !important;
   }
 
   .section-heading p,
@@ -5735,20 +5662,25 @@ svg{
   .final-cta p,
   .security-copy p,
   .business-card p{
-    font-size:14px !important;
-    line-height:1.55 !important;
+    font-size:15px !important;
+    line-height:1.58 !important;
   }
 
-  /* Grids em uma coluna */
   .feature-grid,
   .choose-grid,
   .testimonial-grid,
   .banking-panel-grid,
   .business-tariffs-section,
   .business-card,
+  .app-dashboard,
+  .fintech-lab-section,
+  .private-card,
   .footer-grid{
+    display:grid !important;
     grid-template-columns:1fr !important;
-    gap:14px !important;
+    gap:18px !important;
+    width:100% !important;
+    max-width:100% !important;
   }
 
   .feature,
@@ -5766,107 +5698,102 @@ svg{
   .transactions-card,
   .security-status-card,
   .business-card,
-  .tariffs-card{
-    padding:22px !important;
-    border-radius:22px !important;
+  .tariffs-card,
+  .final-cta{
+    width:100% !important;
+    max-width:100% !important;
+    padding:24px !important;
+    border-radius:24px !important;
+    transform:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    overflow:hidden !important;
+  }
+
+  .feature:hover,
+  .choose-card:hover,
+  .testimonial:hover{
+    transform:none !important;
   }
 
   .feature i,
   .security-card i{
-    width:48px !important;
-    height:48px !important;
-    font-size:20px !important;
-    border-radius:16px !important;
-    margin-bottom:16px !important;
+    width:54px !important;
+    height:54px !important;
+    font-size:22px !important;
+    border-radius:17px !important;
   }
 
-  .feature h3,
-  .choose-card h3{
-    font-size:18px !important;
+  /* Painel estilo app no mobile: remover manchas brancas/overflow */
+  .phone-shell{
+    min-height:auto !important;
+    padding:22px !important;
   }
 
-  .private-card{
-    grid-template-columns:1fr !important;
-    gap:24px !important;
+  .phone-shell::before,
+  .balance-card::before,
+  .spend-card::before{
+    display:none !important;
   }
 
-  .wealth-panel{
-    width:100% !important;
+  .balance-card,
+  .spend-card{
+    background:rgba(255,255,255,.06) !important;
+    border:1px solid rgba(255,255,255,.10) !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
   }
 
-  .panel-top strong,
   .balance-card strong,
-  .account-balance-block strong{
-    font-size:26px !important;
+  .account-balance-block strong,
+  .panel-top strong{
+    font-size:28px !important;
+    color:#fff !important;
+  }
+
+  .quick-actions{
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:10px !important;
+  }
+
+  .quick-actions button{
+    padding:13px 6px !important;
+    border-radius:17px !important;
+    font-size:12px !important;
   }
 
   .chart-bars{
     height:120px !important;
     gap:8px !important;
-    margin:24px 0 !important;
-  }
-
-  .card-rule-section{
-    padding:34px 22px !important;
-    border-radius:24px !important;
-  }
-
-  .fintech-lab-section{
-    grid-template-columns:1fr !important;
-  }
-
-  .app-dashboard{
-    grid-template-columns:1fr !important;
-  }
-
-  .phone-shell{
-    min-height:auto !important;
-  }
-
-  .quick-actions{
-    grid-template-columns:repeat(3, 1fr) !important;
-  }
-
-  .quick-actions button{
-    padding:12px 6px !important;
-    border-radius:15px !important;
-    font-size:12px !important;
-  }
-
-  .calculator-card h3{
-    font-size:24px !important;
-  }
-
-  .calc-result strong{
-    font-size:24px !important;
-  }
-
-  .choose-card,
-  .choose-card.featured{
-    transform:none !important;
-    min-height:auto !important;
-  }
-
-  .popular-badge{
-    top:16px !important;
-    right:16px !important;
-    font-size:10px !important;
+    margin:22px 0 !important;
   }
 
   .mini-card{
     width:100% !important;
     max-width:240px !important;
-    height:136px !important;
-    margin-inline:auto !important;
+    height:140px !important;
+    margin:0 auto 22px !important;
+  }
+
+  .choose-card,
+  .choose-card.featured{
+    min-height:auto !important;
+    transform:none !important;
+  }
+
+  .popular-badge{
+    position:static !important;
+    display:inline-flex !important;
+    margin-bottom:14px !important;
   }
 
   .request-card{
-    padding:13px !important;
-    font-size:13px !important;
+    padding:14px !important;
+    font-size:14px !important;
   }
 
   .transaction-item{
-    grid-template-columns:38px 1fr !important;
+    grid-template-columns:42px 1fr !important;
   }
 
   .transaction-item b{
@@ -5874,56 +5801,35 @@ svg{
     justify-self:start !important;
   }
 
-  .account-actions{
-    grid-template-columns:1fr !important;
-  }
-
+  .account-actions,
   .business-features{
     grid-template-columns:1fr !important;
   }
 
   .final-cta{
+    display:grid !important;
     grid-template-columns:1fr !important;
     text-align:left !important;
-    justify-items:start !important;
-    padding:24px !important;
     gap:18px !important;
   }
 
   .rocket,
   .company-icon{
-    width:54px !important;
-    height:54px !important;
-    border-radius:16px !important;
+    width:56px !important;
+    height:56px !important;
+    border-radius:18px !important;
   }
 
-  .rocket i,
-  .company-icon i{
-    font-size:22px !important;
-  }
-
-  /* Rodapé mobile */
+  /* Footer */
   .footer{
-    width:calc(100% - 24px) !important;
+    display:grid !important;
     grid-template-columns:1fr !important;
     gap:28px !important;
     margin-bottom:24px !important;
-    padding-top:28px !important;
+    padding-top:32px !important;
   }
 
-  .footer-brand{
-    min-width:0 !important;
-  }
-
-  .footer-brand strong{
-    font-size:26px !important;
-  }
-
-  .footer-socials{
-    margin-top:12px !important;
-  }
-
-  /* Modal mobile */
+  /* Modal */
   .bank-modal-final{
     padding:12px !important;
   }
@@ -5932,18 +5838,10 @@ svg{
   .bank-large-final{
     width:100% !important;
     max-width:420px !important;
-    max-height:92vh !important;
+    max-height:90vh !important;
     overflow-y:auto !important;
     padding:20px !important;
     border-radius:22px !important;
-  }
-
-  .bank-modal-card-final h3{
-    font-size:22px !important;
-  }
-
-  .bank-form-final{
-    gap:10px !important;
   }
 
   .bank-form-final input{
@@ -5957,43 +5855,405 @@ svg{
 
   .sms-boxes-final input{
     height:50px !important;
-    font-size:22px !important;
   }
 
   .steps-final{
     grid-template-columns:1fr !important;
-    gap:10px !important;
   }
 
-  .step-final{
-    padding:14px !important;
+  /* Garante que nenhum filho crie largura lateral */
+  main,
+  header,
+  section,
+  div,
+  article{
+    max-width:100% !important;
   }
 }
 
-/* Celulares muito pequenos */
 @media(max-width:390px){
+  .logo strong{
+    font-size:28px !important;
+  }
+
   .hero h1{
-    font-size:32px !important;
+    font-size:36px !important;
   }
 
-  .card{
-    width:130px !important;
-    height:208px !important;
+  .section-heading h2,
+  .private-card h2,
+  .card-rule-content h2,
+  .fintech-copy h2,
+  .final-cta h2,
+  .security-copy h2{
+    font-size:28px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE REFINADO - CARDS EM GRADE, MENOS LISTA
+   ========================================================= */
+
+@media(max-width:768px){
+
+  /* mantém a página sem vazar para o lado */
+  html,
+  body{
+    overflow-x:hidden !important;
+    width:100% !important;
+    max-width:100% !important;
   }
 
-  .hero-visual{
-    height:300px !important;
+  /* cards mais compactos para não parecer lista de compras */
+  .feature-grid,
+  .security-grid,
+  .business-features{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:12px !important;
+    width:100% !important;
   }
 
-  .pink-card{
-    left:0 !important;
+  .feature,
+  .security-card,
+  .business-features div{
+    min-height:185px !important;
+    padding:18px !important;
+    border-radius:22px !important;
   }
 
-  .purple-card{
-    right:0 !important;
+  .feature i,
+  .security-card i,
+  .business-features i{
+    width:46px !important;
+    height:46px !important;
+    font-size:19px !important;
+    border-radius:15px !important;
+    margin-bottom:14px !important;
   }
 
-  .black-card{
-    top:18px !important;
+  .feature h3,
+  .security-card h3{
+    font-size:17px !important;
+    line-height:1.15 !important;
+    margin-bottom:8px !important;
+  }
+
+  .feature p,
+  .security-card p{
+    font-size:12.5px !important;
+    line-height:1.48 !important;
+  }
+
+  /* painel de segurança principal mais elegante */
+  .security-section{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  .security-main{
+    display:grid !important;
+    grid-template-columns:64px 1fr !important;
+    align-items:center !important;
+    gap:16px !important;
+    padding:20px !important;
+    border-radius:24px !important;
+  }
+
+  .security-lock{
+    width:64px !important;
+    height:64px !important;
+    min-width:64px !important;
+    border-radius:20px !important;
+  }
+
+  .security-lock i{
+    font-size:28px !important;
+  }
+
+  .security-copy .tag{
+    display:none !important;
+  }
+
+  .security-copy h2{
+    font-size:24px !important;
+    line-height:1.15 !important;
+    margin:0 0 6px !important;
+  }
+
+  .security-copy p{
+    font-size:13px !important;
+    line-height:1.45 !important;
+  }
+
+  /* área digital em layout mais parecido com app */
+  .banking-panel-grid{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+  }
+
+  .account-overview-card{
+    grid-column:1 / -1 !important;
+  }
+
+  .transactions-card,
+  .security-status-card{
+    min-height:270px !important;
+    padding:18px !important;
+  }
+
+  .panel-title-row{
+    gap:10px !important;
+    margin-bottom:16px !important;
+  }
+
+  .panel-title-row h3{
+    font-size:16px !important;
+    line-height:1.2 !important;
+  }
+
+  .panel-title-row span{
+    font-size:11px !important;
+  }
+
+  .panel-title-row i{
+    width:34px !important;
+    height:34px !important;
+    border-radius:12px !important;
+    font-size:14px !important;
+  }
+
+  .transaction-item{
+    grid-template-columns:32px 1fr !important;
+    gap:8px !important;
+    padding:10px !important;
+  }
+
+  .transaction-item > span{
+    width:32px !important;
+    height:32px !important;
+    border-radius:10px !important;
+    font-size:13px !important;
+  }
+
+  .transaction-item strong{
+    font-size:12px !important;
+  }
+
+  .transaction-item small,
+  .transaction-item b{
+    font-size:11px !important;
+  }
+
+  .security-status-list li{
+    font-size:12px !important;
+    padding:10px 0 !important;
+    gap:8px !important;
+  }
+
+  .security-status-list li span{
+    width:7px !important;
+    height:7px !important;
+  }
+
+  .account-overview-card{
+    padding:20px !important;
+  }
+
+  .account-actions{
+    display:grid !important;
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:10px !important;
+  }
+
+  .account-actions button{
+    padding:12px 6px !important;
+    font-size:12px !important;
+    border-radius:14px !important;
+  }
+
+  .account-balance-block strong{
+    font-size:28px !important;
+  }
+
+  /* dashboard do app em cards lado a lado quando possível */
+  .app-dashboard{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+
+  .phone-shell{
+    padding:18px !important;
+    border-radius:26px !important;
+  }
+
+  .quick-actions{
+    grid-template-columns:repeat(3, 1fr) !important;
+    gap:10px !important;
+  }
+
+  .quick-actions button{
+    min-height:74px !important;
+  }
+
+  .balance-card,
+  .spend-card{
+    padding:18px !important;
+    border-radius:20px !important;
+  }
+
+  /* cartões de escolha em carrossel horizontal leve */
+  .choose-card-section{
+    overflow:hidden !important;
+  }
+
+  .choose-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+
+  .choose-card{
+    padding:20px !important;
+    display:grid !important;
+    grid-template-columns:110px 1fr !important;
+    column-gap:16px !important;
+    align-items:start !important;
+    min-height:auto !important;
+  }
+
+  .choose-card .mini-card{
+    grid-row:1 / span 4 !important;
+    width:110px !important;
+    height:74px !important;
+    border-radius:16px !important;
+    margin:0 !important;
+  }
+
+  .choose-card h3{
+    font-size:18px !important;
+    margin:0 0 6px !important;
+  }
+
+  .choose-card p{
+    font-size:12.5px !important;
+    line-height:1.45 !important;
+  }
+
+  .choose-card ul{
+    margin:12px 0 !important;
+    gap:6px !important;
+  }
+
+  .choose-card li{
+    font-size:12px !important;
+  }
+
+  .request-card{
+    grid-column:2 !important;
+    padding:11px !important;
+    font-size:12px !important;
+    border-radius:12px !important;
+  }
+
+  .popular-badge{
+    position:absolute !important;
+    top:12px !important;
+    right:12px !important;
+    font-size:9px !important;
+    padding:7px 10px !important;
+  }
+
+  /* depoimentos e FAQ com aspecto mais organizado */
+  .testimonial-grid{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+  }
+
+  .testimonial{
+    padding:18px !important;
+    min-height:180px !important;
+  }
+
+  .testimonial p{
+    font-size:12.5px !important;
+  }
+
+  .testimonial strong{
+    font-size:13px !important;
+  }
+
+  .faq-list details{
+    padding:18px !important;
+  }
+
+  /* CTA final compacto */
+  .final-cta{
+    display:grid !important;
+    grid-template-columns:56px 1fr !important;
+    gap:14px !important;
+    align-items:center !important;
+  }
+
+  .final-cta .primary-btn{
+    grid-column:1 / -1 !important;
+  }
+
+  .final-cta h2{
+    font-size:24px !important;
+    margin:0 !important;
+  }
+
+  .final-cta p{
+    font-size:13px !important;
+  }
+}
+
+/* Celular estreito: mantém 2 colunas onde dá, mas evita esmagar */
+@media(max-width:430px){
+  .feature-grid,
+  .security-grid,
+  .business-features,
+  .banking-panel-grid,
+  .testimonial-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .feature,
+  .security-card{
+    padding:16px !important;
+    min-height:180px !important;
+  }
+
+  .feature h3,
+  .security-card h3{
+    font-size:16px !important;
+  }
+
+  .feature p,
+  .security-card p{
+    font-size:12px !important;
+  }
+
+  .choose-card{
+    grid-template-columns:96px 1fr !important;
+    gap:12px !important;
+  }
+
+  .choose-card .mini-card{
+    width:96px !important;
+    height:66px !important;
+  }
+}
+
+/* Muito pequeno: se ficar apertado demais, só os cards densos voltam para 1 coluna */
+@media(max-width:360px){
+  .banking-panel-grid,
+  .testimonial-grid{
+    grid-template-columns:1fr !important;
   }
 }
