@@ -1,23 +1,23 @@
 # Your Bank — Digital Banking Homepage
 
-Homepage moderna de banco digital desenvolvida com foco em experiência premium, interface fluida e visual futurista.
+Modern digital banking homepage developed with a premium user experience, fluid interface, and futuristic visual design.
 
-## ✨ Visão Geral
+## ✨ Overview
 
-O projeto simula a homepage de um banco digital moderno, trazendo:
+This project simulates the homepage of a modern digital bank, featuring:
 
-- Interface premium inspirada em fintechs
-- Design responsivo para desktop e mobile
-- Animações suaves ao rolar a página
-- Cards interativos
-- Simulações financeiras visuais
-- Comparador inteligente de cartões
-- FAQ interativo
-- Experiência visual otimizada sem uso pesado de 3D
+- Premium fintech-inspired interface
+- Fully responsive desktop and mobile design
+- Smooth scroll animations
+- Interactive cards
+- Financial dashboard simulations
+- Smart card comparison section
+- Interactive FAQ
+- High-end visuals without heavy 3D elements
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
 - HTML5
 - CSS3
@@ -28,40 +28,70 @@ O projeto simula a homepage de um banco digital moderno, trazendo:
 
 ---
 
-## 📱 Responsividade
+## 📱 Responsiveness
 
-O projeto foi totalmente ajustado para:
+The project was fully optimized for:
 
 - Desktop
 - Tablets
 - Smartphones
 
-Com adaptação fluida de:
-- painéis
+Including fluid adaptation for:
+- panels
 - grids
-- cartões
-- tipografia
-- animações
+- cards
+- typography
+- animations
 
 ---
 
-## 🎨 Recursos Visuais
+## 🎨 Visual Features
 
-- Gradientes premium
-- Efeito glow
-- Cards financeiros animados
-- Interface estilo aplicativo bancário
-- Painéis horizontais inteligentes
-- Simulação de investimentos
-- Dashboard financeiro
-- FAQ moderno
+- Premium gradients
+- Glow effects
+- Animated banking cards
+- Banking app-inspired interface
+- Smart horizontal panels
+- Investment simulations
+- Financial dashboard
+- Modern FAQ section
 
 ---
 
-## 📂 Estrutura
+## 🔥 Project Goal
 
-```bash
-📁 yourbank-fintech
- ├── index.html
- ├── style.css
- └── script.js
+To create a modern fintech homepage with a professional appearance, strong visual impact, and premium user experience while maintaining high performance.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Rafacodehub**
+
+GitHub:
+https://github.com/rafacodehub
+
+---
+
+## 🌐 Live Demo
+
+Access online:
+https://rafacodehub.github.io/yourbank-fintech/
+
+---
+
+## 📸 Preview
+
+Modern banking interface featuring:
+- digital cards
+- financial dashboard
+- cashback system
+- investments
+- plan comparison
+- premium mobile experience
+
+---
+
+## 📄 License
+
+This project was developed for study, portfolio, and visual demonstration purposes.
