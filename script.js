@@ -1088,3 +1088,43 @@ document.addEventListener('keydown', event => {
     });
   });
 })();
+
+
+/* =========================================================
+   REALCE SUAVE DOS CARROSSÉIS MOBILE
+   ========================================================= */
+(function(){
+  const carousels = document.querySelectorAll('.choose-grid, .banking-panel-grid, .testimonial-grid, .feature-grid, .security-grid');
+
+  function updateCarouselItems(carousel){
+    const rect = carousel.getBoundingClientRect();
+    const center = rect.left + rect.width / 2;
+
+    carousel.querySelectorAll('.choose-card, .account-overview-card, .transactions-card, .security-status-card, .testimonial, .feature, .security-card').forEach(item => {
+      const itemRect = item.getBoundingClientRect();
+      const itemCenter = itemRect.left + itemRect.width / 2;
+      const distance = Math.abs(center - itemCenter);
+      const max = rect.width / 1.15;
+      const ratio = Math.max(0, 1 - distance / max);
+
+      const scale = 0.965 + ratio * 0.035;
+      const opacity = 0.72 + ratio * 0.28;
+
+      item.style.transform = `scale(${scale})`;
+      item.style.opacity = opacity;
+    });
+  }
+
+  carousels.forEach(carousel => {
+    let raf = null;
+
+    const run = () => {
+      if(raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => updateCarouselItems(carousel));
+    };
+
+    carousel.addEventListener('scroll', run, { passive:true });
+    window.addEventListener('resize', run);
+    run();
+  });
+})();
