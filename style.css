@@ -5419,3 +5419,581 @@ body{
     height:39px !important;
   }
 }
+
+
+/* =========================================================
+   RESPONSIVO FINAL - PC + CELULAR NO MESMO CÓDIGO
+   ========================================================= */
+
+/* Evita estouro horizontal em qualquer tela */
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden !important;
+}
+
+img,
+video,
+canvas,
+svg{
+  max-width:100%;
+}
+
+/* Ajuste intermediário para notebooks/tablets */
+@media(max-width:1180px){
+  .section{
+    width:calc(100% - 32px) !important;
+  }
+
+  .navbar{
+    width:calc(100% - 28px) !important;
+    gap:18px !important;
+  }
+
+  .hero-content,
+  .private-card,
+  .fintech-lab-section,
+  .app-dashboard,
+  .banking-panel-grid,
+  .business-tariffs-section,
+  .business-card{
+    grid-template-columns:1fr !important;
+  }
+
+  .hero-content{
+    gap:34px !important;
+    min-height:auto !important;
+  }
+
+  .hero-visual{
+    margin-inline:auto !important;
+  }
+
+  .feature-grid{
+    grid-template-columns:repeat(2, 1fr) !important;
+  }
+
+  .choose-grid,
+  .testimonial-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* Mobile principal */
+@media(max-width:768px){
+
+  body{
+    background:
+      radial-gradient(circle at 20% 4%, rgba(139,46,255,.20), transparent 34%),
+      linear-gradient(180deg,#050008 0%,#0b0016 100%) !important;
+  }
+
+  .section{
+    width:calc(100% - 24px) !important;
+    margin-inline:auto !important;
+  }
+
+  /* Header mobile limpo */
+  .navbar{
+    top:10px !important;
+    width:calc(100% - 20px) !important;
+    min-height:68px !important;
+    padding:12px 14px !important;
+    border-radius:22px !important;
+    gap:10px !important;
+  }
+
+  .navbar.scrolled{
+    top:8px !important;
+    min-height:64px !important;
+  }
+
+  .logo strong{
+    font-size:22px !important;
+    letter-spacing:1.4px !important;
+  }
+
+  .logo span{
+    margin-top:4px !important;
+    font-size:10px !important;
+    letter-spacing:1.2px !important;
+  }
+
+  .menu-toggle{
+    display:grid !important;
+    place-items:center !important;
+    width:42px !important;
+    height:42px !important;
+    border-radius:14px !important;
+    flex:0 0 auto !important;
+  }
+
+  .nav-links{
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+    top:calc(100% + 10px) !important;
+    display:none !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+    padding:18px !important;
+    border-radius:20px !important;
+    background:rgba(8,3,18,.96) !important;
+    border:1px solid rgba(255,255,255,.10) !important;
+    transform:none !important;
+  }
+
+  .nav-links.active{
+    display:flex !important;
+  }
+
+  .nav-links a{
+    font-size:14px !important;
+  }
+
+  .nav-actions{
+    gap:8px !important;
+  }
+
+  .nav-search,
+  .login{
+    display:none !important;
+  }
+
+  .account-btn{
+    display:none !important;
+  }
+
+  /* Hero mobile */
+  .hero{
+    min-height:auto !important;
+    padding-top:108px !important;
+    padding-bottom:32px !important;
+  }
+
+  .hero-content{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:26px !important;
+    min-height:auto !important;
+  }
+
+  .hero-copy{
+    text-align:left !important;
+  }
+
+  .tag,
+  .tag.small{
+    font-size:10px !important;
+    padding:8px 12px !important;
+    letter-spacing:1px !important;
+  }
+
+  .hero h1{
+    margin-top:18px !important;
+    margin-bottom:14px !important;
+    font-size:clamp(34px, 10vw, 46px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-1.6px !important;
+    max-width:100% !important;
+  }
+
+  .hero p{
+    font-size:15px !important;
+    line-height:1.55 !important;
+    max-width:100% !important;
+  }
+
+  .buttons{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:12px !important;
+    margin-top:22px !important;
+  }
+
+  .primary-btn,
+  .video-btn{
+    width:100% !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    padding:13px 16px !important;
+    border-radius:14px !important;
+    font-size:14px !important;
+  }
+
+  .play{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  /* Cartões do topo no mobile */
+  .hero-visual{
+    width:100% !important;
+    min-width:0 !important;
+    height:330px !important;
+    transform:none !important;
+    margin:0 auto !important;
+    overflow:visible !important;
+  }
+
+  .orbit-line,
+  .finance-badge{
+    display:none !important;
+  }
+
+  .card{
+    width:145px !important;
+    height:230px !important;
+    border-radius:20px !important;
+  }
+
+  .pink-card{
+    left:4% !important;
+    top:58px !important;
+    transform:rotate(-10deg) !important;
+  }
+
+  .black-card{
+    left:50% !important;
+    top:24px !important;
+    transform:translateX(-50%) rotate(0deg) !important;
+    z-index:5 !important;
+  }
+
+  .purple-card{
+    right:4% !important;
+    top:62px !important;
+    transform:rotate(10deg) !important;
+  }
+
+  .card span{
+    left:18px !important;
+    bottom:22px !important;
+    font-size:14px !important;
+  }
+
+  .chip{
+    width:34px !important;
+    height:25px !important;
+    top:22px !important;
+    left:20px !important;
+    border-radius:7px !important;
+  }
+
+  .wifi{
+    right:20px !important;
+    top:24px !important;
+    font-size:15px !important;
+  }
+
+  .mastercard{
+    right:18px !important;
+    bottom:18px !important;
+  }
+
+  .mastercard span{
+    width:24px !important;
+    height:24px !important;
+  }
+
+  /* Seções mais compactas */
+  .features,
+  .choose-card-section,
+  .testimonials,
+  .faq-section,
+  .private-section,
+  .fintech-lab-section,
+  .banking-panel-section,
+  .business-tariffs-section{
+    padding-block:38px !important;
+  }
+
+  .section-heading{
+    margin-bottom:24px !important;
+    text-align:left !important;
+  }
+
+  .section-heading h2,
+  .private-card h2,
+  .card-rule-content h2,
+  .fintech-copy h2,
+  .final-cta h2,
+  .security-copy h2,
+  .business-card h2{
+    font-size:clamp(26px, 8vw, 34px) !important;
+    line-height:1.15 !important;
+    letter-spacing:-.8px !important;
+  }
+
+  .section-heading p,
+  .private-card p,
+  .card-rule-content p,
+  .fintech-copy p,
+  .final-cta p,
+  .security-copy p,
+  .business-card p{
+    font-size:14px !important;
+    line-height:1.55 !important;
+  }
+
+  /* Grids em uma coluna */
+  .feature-grid,
+  .choose-grid,
+  .testimonial-grid,
+  .banking-panel-grid,
+  .business-tariffs-section,
+  .business-card,
+  .footer-grid{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+
+  .feature,
+  .choose-card,
+  .testimonial,
+  .faq-list details,
+  .calculator-card,
+  .phone-shell,
+  .wealth-panel,
+  .private-card,
+  .card-rule-section,
+  .security-main,
+  .security-card,
+  .account-overview-card,
+  .transactions-card,
+  .security-status-card,
+  .business-card,
+  .tariffs-card{
+    padding:22px !important;
+    border-radius:22px !important;
+  }
+
+  .feature i,
+  .security-card i{
+    width:48px !important;
+    height:48px !important;
+    font-size:20px !important;
+    border-radius:16px !important;
+    margin-bottom:16px !important;
+  }
+
+  .feature h3,
+  .choose-card h3{
+    font-size:18px !important;
+  }
+
+  .private-card{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+  }
+
+  .wealth-panel{
+    width:100% !important;
+  }
+
+  .panel-top strong,
+  .balance-card strong,
+  .account-balance-block strong{
+    font-size:26px !important;
+  }
+
+  .chart-bars{
+    height:120px !important;
+    gap:8px !important;
+    margin:24px 0 !important;
+  }
+
+  .card-rule-section{
+    padding:34px 22px !important;
+    border-radius:24px !important;
+  }
+
+  .fintech-lab-section{
+    grid-template-columns:1fr !important;
+  }
+
+  .app-dashboard{
+    grid-template-columns:1fr !important;
+  }
+
+  .phone-shell{
+    min-height:auto !important;
+  }
+
+  .quick-actions{
+    grid-template-columns:repeat(3, 1fr) !important;
+  }
+
+  .quick-actions button{
+    padding:12px 6px !important;
+    border-radius:15px !important;
+    font-size:12px !important;
+  }
+
+  .calculator-card h3{
+    font-size:24px !important;
+  }
+
+  .calc-result strong{
+    font-size:24px !important;
+  }
+
+  .choose-card,
+  .choose-card.featured{
+    transform:none !important;
+    min-height:auto !important;
+  }
+
+  .popular-badge{
+    top:16px !important;
+    right:16px !important;
+    font-size:10px !important;
+  }
+
+  .mini-card{
+    width:100% !important;
+    max-width:240px !important;
+    height:136px !important;
+    margin-inline:auto !important;
+  }
+
+  .request-card{
+    padding:13px !important;
+    font-size:13px !important;
+  }
+
+  .transaction-item{
+    grid-template-columns:38px 1fr !important;
+  }
+
+  .transaction-item b{
+    grid-column:2 !important;
+    justify-self:start !important;
+  }
+
+  .account-actions{
+    grid-template-columns:1fr !important;
+  }
+
+  .business-features{
+    grid-template-columns:1fr !important;
+  }
+
+  .final-cta{
+    grid-template-columns:1fr !important;
+    text-align:left !important;
+    justify-items:start !important;
+    padding:24px !important;
+    gap:18px !important;
+  }
+
+  .rocket,
+  .company-icon{
+    width:54px !important;
+    height:54px !important;
+    border-radius:16px !important;
+  }
+
+  .rocket i,
+  .company-icon i{
+    font-size:22px !important;
+  }
+
+  /* Rodapé mobile */
+  .footer{
+    width:calc(100% - 24px) !important;
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+    margin-bottom:24px !important;
+    padding-top:28px !important;
+  }
+
+  .footer-brand{
+    min-width:0 !important;
+  }
+
+  .footer-brand strong{
+    font-size:26px !important;
+  }
+
+  .footer-socials{
+    margin-top:12px !important;
+  }
+
+  /* Modal mobile */
+  .bank-modal-final{
+    padding:12px !important;
+  }
+
+  .bank-modal-card-final,
+  .bank-large-final{
+    width:100% !important;
+    max-width:420px !important;
+    max-height:92vh !important;
+    overflow-y:auto !important;
+    padding:20px !important;
+    border-radius:22px !important;
+  }
+
+  .bank-modal-card-final h3{
+    font-size:22px !important;
+  }
+
+  .bank-form-final{
+    gap:10px !important;
+  }
+
+  .bank-form-final input{
+    height:42px !important;
+    font-size:13px !important;
+  }
+
+  .sms-boxes-final{
+    gap:8px !important;
+  }
+
+  .sms-boxes-final input{
+    height:50px !important;
+    font-size:22px !important;
+  }
+
+  .steps-final{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+
+  .step-final{
+    padding:14px !important;
+  }
+}
+
+/* Celulares muito pequenos */
+@media(max-width:390px){
+  .hero h1{
+    font-size:32px !important;
+  }
+
+  .card{
+    width:130px !important;
+    height:208px !important;
+  }
+
+  .hero-visual{
+    height:300px !important;
+  }
+
+  .pink-card{
+    left:0 !important;
+  }
+
+  .purple-card{
+    right:0 !important;
+  }
+
+  .black-card{
+    top:18px !important;
+  }
+}
