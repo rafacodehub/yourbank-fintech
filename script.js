@@ -1134,3 +1134,21 @@ document.addEventListener('keydown', event => {
     run();
   });
 })();
+
+
+/* =========================================================
+   OCULTAR PAINEL ANTIGO DO ASSISTENTE FINANCEIRO
+   ========================================================= */
+(function(){
+  document.querySelectorAll('section, article, div').forEach(el => {
+    const text = (el.textContent || '').replace(/\s+/g, ' ').trim();
+
+    if(
+      text.includes('ASSISTENTE FINANCEIRO') ||
+      text.includes('Orientação dentro do app')
+    ){
+      const section = el.closest('section') || el;
+      section.classList.add('assistant-finance-hidden');
+    }
+  });
+})();

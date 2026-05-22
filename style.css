@@ -9123,3 +9123,77 @@ section:has(.search-tags.ai-tags){
     transform:scale(.985) !important;
   }
 }
+
+
+/* =========================================================
+   AJUSTE FINAL SOLICITADO
+   - Oculta painel "Assistente Financeiro"
+   - Corrige quebra do degradê no fundo desktop
+   ========================================================= */
+
+/* Fundo geral sem faixa/quebra vertical no PC */
+html,
+body{
+  background-color:#050008 !important;
+}
+
+body{
+  background:
+    radial-gradient(circle at 18% 8%, rgba(139,46,255,.30), transparent 35%),
+    radial-gradient(circle at 84% 18%, rgba(95,0,255,.22), transparent 38%),
+    radial-gradient(circle at 48% 88%, rgba(90,0,190,.16), transparent 48%),
+    linear-gradient(180deg,#050008 0%,#080012 42%,#0b0016 100%) !important;
+}
+
+/* Remove qualquer camada fixa que esteja criando uma faixa diferente no fundo */
+.theme-gradient-layer{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:-3 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(139,46,255,.22), transparent 36%),
+    radial-gradient(circle at 86% 18%, rgba(95,0,255,.18), transparent 40%),
+    linear-gradient(180deg,#050008 0%,#080012 45%,#0b0016 100%) !important;
+}
+
+/* Garante que seções não criem bloco de fundo vertical diferente */
+main,
+.hero,
+.section,
+.features,
+.private-section,
+.fintech-lab-section,
+.choose-card-section,
+.testimonials,
+.faq-section,
+.banking-panel-section,
+.business-tariffs-section{
+  background:transparent !important;
+}
+
+/* Oculta painel antigo de assistente financeiro sem apagar HTML */
+.assistant-finance-hidden{
+  display:none !important;
+}
+
+/* Fallback visual para painéis com esses textos/classes específicas */
+section:has(.tag):has(.search-tags):has(h2),
+section:has(.tag):has(.ai-actions):has(h2),
+section:has(.tag):has(.assistant-card):has(h2){
+  display:none !important;
+}
+
+@media(max-width:768px){
+  body{
+    background:
+      radial-gradient(circle at 20% 2%, rgba(139,46,255,.25), transparent 35%),
+      linear-gradient(180deg,#050008 0%,#080012 44%,#0b0016 100%) !important;
+  }
+
+  .theme-gradient-layer{
+    background:
+      radial-gradient(circle at 22% 0%, rgba(139,46,255,.18), transparent 35%),
+      linear-gradient(180deg,#050008 0%,#080012 48%,#0b0016 100%) !important;
+  }
+}
